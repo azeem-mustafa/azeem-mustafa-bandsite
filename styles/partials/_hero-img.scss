@@ -1,0 +1,7 @@
+@use './mixin' as *;
+
+.hero-img{
+    @include mobile{
+        
+    }
+}

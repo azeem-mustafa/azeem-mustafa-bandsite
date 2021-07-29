@@ -1,0 +1,140 @@
+@use './variable' as *;
+@use './mixin' as *;
+@use './typography' as *;
+
+header{
+
+    @include mobile{
+        background-color: $black;
+        
+        .header__wrapper{
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            width: 95%;
+        }
+
+        .logo{
+            padding: 1.25rem;
+            display: flex;
+            color: $white;
+            align-items: center;
+        }
+
+        .nav-bar{
+            width: 100%;
+
+            &__list{
+                display: flex;
+                color: $white;
+                margin-block-start: 0em;
+                padding-left: 0;
+                height: 100%;
+            }
+
+            &__item{
+                width: 50%;
+                display: flex;
+                text-align: center;
+            }
+
+            &__link{
+                justify-content: center;
+                flex-grow: 2;
+
+                &--selected{
+                    border-bottom: $white 10px solid;
+                    font-weight: 550;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    @include tablet{
+        background-color: chartreuse;
+
+        .nav-bar{
+            width: 70%;
+            border: green 4px solid;
+        }
+    }
+
+    @include desktop{
+        background-color: blue;
+    }
+    background-color: $black;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+
+/*888888888888888888888888*/
+
+/*
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.page-title {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #eeeeee;
+    border-bottom: 5px solid grey;
+
+    @include tablet {
+        background-color: #ccc;
+        border-bottom-color: magenta;
+        color: white;
+    }
+
+    @include desktop {
+        background-color: #aaa;
+        border-bottom-color: lightgoldenrodyellow;
+    }
+}
+
+.mobile-menu {
+    padding: 1rem;
+    text-align:center;
+    background-color: papayawhip;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 1rem;
+
+        @include tablet {
+            width: calc(33.333% - 2rem);
+        }
+
+        @include desktop {
+            width: calc(25% - 2rem);
+        }
+    }
+}
+
+.image {
+    width: 40%;
+}
+*/

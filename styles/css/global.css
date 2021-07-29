@@ -1,2 +1,231 @@
+/*primary colors*/
+/*secondary colors*/
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+h1, h2, h3, h4, h5, h6, p, li {
+  font-family: "AvenirNext LT Pro";
+}
 
-/*# sourceMappingURL=global.css.map *//*# sourceMappingURL=global.css.map */
+/*desktop fonts*/
+.text--page-header {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+}
+
+.text--section-header {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+.text--subheader {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text--body {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.text--footer {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text--labels-buttons {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+/*Mobile fonts*/
+.logo__text {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.nav-bar__link {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+* {
+  font-family: "AvenirNext LT PRO";
+}
+
+header {
+  background-color: #323232;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 360px) {
+  header {
+    background-color: #323232;
+  }
+  header .header__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    width: 95%;
+  }
+  header .logo {
+    padding: 1.25rem;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+  }
+  header .nav-bar {
+    width: 100%;
+  }
+  header .nav-bar__list {
+    display: flex;
+    color: #ffffff;
+    -webkit-margin-before: 0em;
+            margin-block-start: 0em;
+    padding-left: 0;
+    height: 100%;
+  }
+  header .nav-bar__item {
+    width: 50%;
+    display: flex;
+    text-align: center;
+  }
+  header .nav-bar__link {
+    justify-content: center;
+    flex-grow: 2;
+  }
+  header .nav-bar__link--selected {
+    border-bottom: #ffffff 10px solid;
+    font-weight: 550;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    background-color: chartreuse;
+  }
+  header .nav-bar {
+    width: 70%;
+    border: green 4px solid;
+  }
+}
+@media (min-width: 1280px) {
+  header {
+    background-color: blue;
+  }
+}
+
+/*888888888888888888888888*/
+/*
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.page-title {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #eeeeee;
+    border-bottom: 5px solid grey;
+
+    @include tablet {
+        background-color: #ccc;
+        border-bottom-color: magenta;
+        color: white;
+    }
+
+    @include desktop {
+        background-color: #aaa;
+        border-bottom-color: lightgoldenrodyellow;
+    }
+}
+
+.mobile-menu {
+    padding: 1rem;
+    text-align:center;
+    background-color: papayawhip;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 1rem;
+
+        @include tablet {
+            width: calc(33.333% - 2rem);
+        }
+
+        @include desktop {
+            width: calc(25% - 2rem);
+        }
+    }
+}
+
+.image {
+    width: 40%;
+}
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  font-family: "AvenirNext LT Pro";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}/*# sourceMappingURL=global.css.map */
