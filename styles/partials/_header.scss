@@ -3,9 +3,9 @@
 @use './typography' as *;
 
 header{
+    background-color: $black;
 
     @include mobile{
-        background-color: $black;
         
         .header__wrapper{
             flex-wrap: wrap;
@@ -19,6 +19,12 @@ header{
             display: flex;
             color: $white;
             align-items: center;
+
+            &__text{
+                max-height: 1.25rem;
+                max-width: 7.5rem;
+
+            }
         }
 
         .nav-bar{
@@ -43,7 +49,7 @@ header{
                 flex-grow: 2;
 
                 &--selected{
-                    border-bottom: $white 10px solid;
+                    border-bottom: $alabaster 10px solid;
                     font-weight: 550;
                     margin: 0;
                     padding: 0;
@@ -64,9 +70,7 @@ header{
     @include desktop{
         background-color: blue;
     }
-    background-color: $black;
-    display: flex;
-    flex-wrap: wrap;
+    
 
 }
 

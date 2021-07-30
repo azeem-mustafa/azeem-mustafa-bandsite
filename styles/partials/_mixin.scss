@@ -61,3 +61,10 @@
     font-size: 0.625rem;
     line-height: 1.25rem;
   }
+
+
+  /*mobile layout*/
+
+  @mixin mobile-general-padding-no-top{
+    padding: 0rem 1rem 1rem 1rem;
+  }

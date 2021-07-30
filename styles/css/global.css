@@ -1,5 +1,6 @@
 /*primary colors*/
 /*secondary colors*/
+/*mobile layout*/
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
@@ -83,19 +84,32 @@ h1, h2, h3, h4, h5, h6, p, li {
   line-height: 2rem;
 }
 
+@media (min-width: 360px) {
+  .page-header {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .section-header {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
 * {
   font-family: "AvenirNext LT PRO";
 }
 
 header {
   background-color: #323232;
-  display: flex;
-  flex-wrap: wrap;
 }
 @media (min-width: 360px) {
-  header {
-    background-color: #323232;
-  }
   header .header__wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -107,6 +121,10 @@ header {
     display: flex;
     color: #ffffff;
     align-items: center;
+  }
+  header .logo__text {
+    max-height: 1.25rem;
+    max-width: 7.5rem;
   }
   header .nav-bar {
     width: 100%;
@@ -129,7 +147,7 @@ header {
     flex-grow: 2;
   }
   header .nav-bar__link--selected {
-    border-bottom: #ffffff 10px solid;
+    border-bottom: #FAFAFA 10px solid;
     font-weight: 550;
     margin: 0;
     padding: 0;
