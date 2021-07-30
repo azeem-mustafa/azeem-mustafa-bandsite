@@ -3,7 +3,6 @@
 @use './typography' as *;
 
 .footer{
-    border: blueviolet 3px solid;
     background-color: $black;
     display: flex;
     flex-wrap: wrap;
@@ -13,50 +12,42 @@
 
     &__headline{
         color: $white;
-
-        @include mobile{
-            @include mobile-general-padding-headlines;
+        @include mobile-general-padding-headlines;
         }
-    }
+
+    //social logos
 
     &__social-links{
-        @include mobile{
-            @include mobile-general-padding-no-top
-
-        }
-        border: green 3px solid;
+        @include mobile-general-padding-no-top;
         
         &--images{
-            
-            
-
-            @include mobile {
-                border: springgreen 2px solid;
                 padding-right: 1rem;
             }
         }
-    }
     
+    //address and contact info 
+
     &__name-and-company{
         h4{
             margin: 0;
         }
-
-        @include mobile{
             @include mobile-general-padding-no-top
-        }
     }
 
     &__address{
-        @include mobile{
             @include mobile-general-padding-no-top;
-        }
     }
 
     &__email{
-        @include mobile{
             @include mobile-general-padding-no-top;
-        }
     }
 
+    // copyright section
+
+     &__copyright{
+
+        &--text{
+        @include mobile-general-padding-no-top;
+        }
+     }
 }
