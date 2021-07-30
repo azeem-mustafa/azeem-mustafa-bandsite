@@ -65,6 +65,11 @@
 
   /*mobile layout*/
 
+  @mixin mobile-general-padding-headlines{
+    margin: 0;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+    
   @mixin mobile-general-padding-no-top{
     padding: 0rem 1rem 1rem 1rem;
   }

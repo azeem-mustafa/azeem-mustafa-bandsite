@@ -1,0 +1,23 @@
+@use './mixin' as *;
+@use './typography' as *;
+@use './variable' as *;
+
+.photo-gallery{
+    border: brown 3px solid;
+
+    &__title{
+
+        @include mobile{
+            @include mobile-general-padding-headlines;
+        }
+    }
+
+    &__images{
+
+        @include mobile{
+            @include mobile-general-padding-no-top;
+            width: 100%;
+        
+        }
+    }
+}

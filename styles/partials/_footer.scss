@@ -1,0 +1,62 @@
+@use './mixin' as *;
+@use './variable' as *;
+@use './typography' as *;
+
+.footer{
+    border: blueviolet 3px solid;
+    background-color: $black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: $white;
+
+
+    &__headline{
+        color: $white;
+
+        @include mobile{
+            @include mobile-general-padding-headlines;
+        }
+    }
+
+    &__social-links{
+        @include mobile{
+            @include mobile-general-padding-no-top
+
+        }
+        border: green 3px solid;
+        
+        &--images{
+            
+            
+
+            @include mobile {
+                border: springgreen 2px solid;
+                padding-right: 1rem;
+            }
+        }
+    }
+    
+    &__name-and-company{
+        h4{
+            margin: 0;
+        }
+
+        @include mobile{
+            @include mobile-general-padding-no-top
+        }
+    }
+
+    &__address{
+        @include mobile{
+            @include mobile-general-padding-no-top;
+        }
+    }
+
+    &__email{
+        @include mobile{
+            @include mobile-general-padding-no-top;
+        }
+    }
+
+}

@@ -1,5 +1,6 @@
 @use './partials/typography' as *;
 @use './partials/header' as *;
+@use './partials/footer' as *;
 
 *, *::before, *::after{
     box-sizing: border-box;
