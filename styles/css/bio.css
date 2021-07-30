@@ -5,7 +5,6 @@
 .hero-img {
   background-image: url(../../assets/Images/hero-bio.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -13,17 +12,9 @@
 }
 .hero-img__overlay {
   background-color: #323232;
-  position: absolute;
   height: 60vh;
   width: 100%;
   opacity: 0.5;
-  display: flex;
-  align-items: center;
-}
-@media (min-width: 360px) {
-  .hero-img {
-    height: 60vh;
-  }
 }
 .hero-img__page-title {
   position: absolute;
@@ -31,86 +22,43 @@
   padding: 1rem;
 }
 
-.musicians-article {
-  border: blue 2px solid;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
 .musicians-article .section-header {
   margin: 0;
-}
-@media (min-width: 360px) {
-  .musicians-article .section-header {
-    padding: 1.5rem 1rem 1rem 1rem;
-  }
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 .musicians-article__image {
   width: 100%;
-}
-@media (min-width: 360px) {
-  .musicians-article__image {
-    padding: 0rem 1rem 1rem 1rem;
-  }
+  padding: 0rem 1rem 1rem 1rem;
 }
 .musicians-article__blockquote {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   margin: 0;
-  width: 100%;
+  padding: 0rem 1rem 1rem 1rem;
 }
-@media (min-width: 360px) {
-  .musicians-article__blockquote {
-    padding: 0rem 1rem 1rem 1rem;
-  }
+.musicians-article__quotation {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  width: 41ch;
+  font-weight: 600;
 }
-@media (min-width: 360px) {
-  .musicians-article__quotation {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 400;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    width: 41ch;
-    font-weight: 550;
-  }
-}
-@media (min-width: 360px) {
-  .musicians-article__quotation--author {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 400;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    font-weight: 600;
-  }
-}
-.musicians-article__written-block {
-  display: flex;
-  flex-grow: 2;
-  width: 100%;
-  border: yellow 2px solid;
-}
-.musicians-article__side-blocks {
-  display: flex;
-  flex-direction: column;
-  border: tan 2px solid;
-  width: 100%;
+.musicians-article__quotation--author {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 600;
 }
 .musicians-article__side-blocks--title {
-  -webkit-margin-before: 0em;
-          margin-block-start: 0em;
   -webkit-margin-after: 0em;
           margin-block-end: 0em;
-  border: blue 2px solid;
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.375rem;
-}
-@media (min-width: 360px) {
-  .musicians-article__side-blocks--title {
-    padding: 0rem 1rem 1rem 1rem;
-  }
+  padding: 0rem 1rem 1rem 1rem;
 }
 .musicians-article__side-blocks p {
   -webkit-margin-before: 0em;
@@ -118,134 +66,18 @@
   -webkit-margin-after: 0em;
           margin-block-end: 0em;
   width: 45ch;
-}
-@media (min-width: 360px) {
-  .musicians-article__side-blocks p {
-    padding: 0rem 1rem 1rem 1rem;
-    font-family: "AvenirNext LT Pro";
-    font-weight: 400;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-  }
-}
-
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-h1, h2, h3, h4, h5, h6, p, li {
-  font-family: "AvenirNext LT Pro";
-}
-
-/*desktop fonts*/
-.text--page-header {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 3.75rem;
-  line-height: 4.25rem;
-}
-
-.text--section-header {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-}
-
-.text--subheader {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text--body {
+  padding: 0rem 1rem 1rem 1rem;
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
-.text--footer {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.photo-gallery__title {
+  margin: 0;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
-
-.text--labels-buttons {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-}
-
-/*Mobile fonts*/
-.logo__text {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 2rem;
-}
-
-.nav-bar__link {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-@media (min-width: 360px) {
-  .page-header {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width: 360px) {
-  .section-header {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-* {
-  font-family: "AvenirNext LT PRO";
-}
-
-.photo-gallery {
-  border: brown 3px solid;
-}
-@media (min-width: 360px) {
-  .photo-gallery__title {
-    margin: 0;
-    padding: 1.5rem 1rem 1rem 1rem;
-  }
-}
-@media (min-width: 360px) {
-  .photo-gallery__images {
-    padding: 0rem 1rem 1rem 1rem;
-    width: 100%;
-  }
+.photo-gallery__images {
+  padding: 0rem 1rem 1rem 1rem;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

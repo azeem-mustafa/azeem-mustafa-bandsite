@@ -1,94 +1,49 @@
 @use './mixin' as *;
 
 .musicians-article{
-    border: blue 2px solid;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 
     .section-header{
         margin: 0;
-        @include mobile{
         padding: 1.5rem 1rem 1rem 1rem;
-
         }
-        
-
-    }
 
     &__image{
         width: 100%;
-
-        @include mobile{
-            @include mobile-general-padding-no-top;
+        @include mobile-general-padding-no-top;
         }
-    }
 
     &__blockquote{
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         margin: 0;
-        width: 100%;
-
-        @include mobile{
         @include mobile-general-padding-no-top;
         }
-    }
 
     &__quotation{
-
-        @include mobile{
         @include mobiletext--body;
         width: 41ch;
-        font-weight: 550;
-    }
-    &--author{
-        @include mobile{
+        font-weight: 600;
+        
+        &--author{
             @include mobiletext--body;
             font-weight: 600;
-            }
         }
-     }
-
-     &__written-block{
-         display: flex;
-         flex-grow: 2;
-         width: 100%;
-         
-        border: yellow 2px solid;
     }
 
-
      &__side-blocks{
-         display: flex;
-         flex-direction: column;
-         border: tan 2px solid;
-         width: 100%;
          
-
          &--title{
-            margin-block-start: 0em;
             margin-block-end: 0em;
-            border: blue 2px solid;
             @include mobiletext--subheader;
-
-            @include mobile{
              @include mobile-general-padding-no-top;
             }
-         }
 
         p{
-        
         margin-block-start: 0em;
         margin-block-end: 0em;
         width: 45ch;
-
-        @include mobile{
-            @include mobile-general-padding-no-top;
-            @include mobiletext--body;
+        @include mobile-general-padding-no-top;
+        @include mobiletext--body;
         }
-        }
-    }
-    
+    } 
 }

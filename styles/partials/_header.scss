@@ -4,26 +4,22 @@
 
 header{
     background-color: $black;
-
-    @include mobile{
         
-        .header__wrapper{
-            flex-wrap: wrap;
-            justify-content: center;
-            display: flex;
-            width: 95%;
+    .header__wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        width: 95%;
         }
 
         .logo{
             padding: 1.25rem;
-            display: flex;
             color: $white;
             align-items: center;
 
             &__text{
                 max-height: 1.25rem;
                 max-width: 7.5rem;
-
             }
         }
 
@@ -45,35 +41,14 @@ header{
             }
 
             &__link{
-                justify-content: center;
                 flex-grow: 2;
 
                 &--selected{
                     border-bottom: $alabaster 10px solid;
-                    font-weight: 550;
-                    margin: 0;
-                    padding: 0;
                 }
-            }
-        }
+            }  
     }
-
-    @include tablet{
-        background-color: chartreuse;
-
-        .nav-bar{
-            width: 70%;
-            border: green 4px solid;
-        }
-    }
-
-    @include desktop{
-        background-color: blue;
-    }
-    
-
 }
-
 
 
 
