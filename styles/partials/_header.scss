@@ -9,15 +9,33 @@ header{
         flex-wrap: wrap;
         justify-content: center;
         display: flex;
-        width: 95%;
+        border: blue 2px solid;
+
+        @include tablet{
+            display: inline-flex;
+            width: 100%;
+            }
         }
 
         .logo{
-            padding: 1.25rem;
+            @include mobile-general-padding-headlines;
             color: $white;
-            align-items: center;
+            border: green 4px solid;
+
+            @include tablet{
+                display: inline-flex;
+                align-items: center;
+                width: 30%;
+                @include general-padding-headlines;
+            }
+
+            @include desktop{
+                @include desktop-padding-headlines;
+            }
 
             &__text{
+                align-items: center;
+                border: blue 2px solid;
                 max-height: 1.25rem;
                 max-width: 7.5rem;
             }
@@ -25,6 +43,11 @@ header{
 
         .nav-bar{
             width: 100%;
+            border: yellow 2px solid;
+
+            @include tablet{
+                width: 70%;
+            }
 
             &__list{
                 display: flex;
@@ -32,19 +55,45 @@ header{
                 margin-block-start: 0em;
                 padding-left: 0;
                 height: 100%;
+                border: 2px magenta solid;
+
+                @include tablet{
+                    display: inline-flex;
+                    align-items: center;
+                    margin-block-end: 0em;
+                }
             }
 
             &__item{
                 width: 50%;
                 display: flex;
-                text-align: center;
+                align-items: center;
+                border: mediumturquoise 2px solid;
+
+                @include tablet{
+                    margin-right: 1rem;
+                    align-items: center;
+                }
             }
 
             &__link{
-                flex-grow: 2;
+                flex-grow: 2;  
+                color: $mercury;  
+                text-align: center;
+                border: midnightblue 4px solid;
 
-                &--selected{
+                @include tablet{
+                    height: 100%;
+                    @include general-padding-headlines
+
+                }
+
+
+                &:hover{
                     border-bottom: $alabaster 10px solid;
+                    color: $white;
+                    font-weight: 600;
+
                 }
             }  
     }

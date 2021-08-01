@@ -25,10 +25,10 @@
 
             <ul class="nav-bar__list">
               <li class="nav-bar__item">
-                <a class="nav-bar__link nav-bar__link--selected" href="./index.html">Biography</a>
+                <a class="nav-bar__link .subheader" href="./index.html">Biography</a>
               </li>
               <li class="nav-bar__item">
-                <a class="nav-bar__link" href="./pages/show.html">Shows</a>
+                <a class="nav-bar__link .subheader" href="./pages/show.html">Shows</a>
               </li>
             </ul>
 
@@ -43,6 +43,7 @@
 <!--------------Main Hero Banner------------->
 
     <section class="hero-img">
+      <img class="hero-img__background" src="./assets/Images/hero-bio.jpg" alt="hero-img">
 
       <div class="hero-img__overlay"></div>
       <h1 class="hero-img__page-title page-header">The Bees Knees</h1>
@@ -54,6 +55,9 @@
     <section class="musicians-article">
           
       <h3 class="muscians-article__title section-header">About the Musicians</h3>   
+
+      <div class="musicians-article__content-box">
+
       <img class="musicians-article__image" src="./assets/Images/band.jpg" alt="band image">
 
 
@@ -61,8 +65,8 @@
 
       <blockquote class="musicians-article__blockquote">
 
-        <q class="musicians-article__quotation">We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board</q>
-        <p class="musicians-article__quotation--author">- Bryan Teddy, lead vocalist of The Bees Knees</p>
+        <q class="musicians-article__quotation subheader">We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board</q>
+        <p class="musicians-article__quotation--author subheader">- Bryan Teddy, lead vocalist of The Bees Knees</p>
 
       </blockquote>
 
@@ -73,14 +77,18 @@
 
         <aside class="musicians-article__side-blocks">
 
-          <h3 class="musicians-article__side-blocks--title">The Bees Knees</h3>
-                
-          <p>The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. </p>
-          <p> From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
+          <h3 class="musicians-article__side-blocks--title body-copy">The Bees Knees</h3>
+          
+          <div class="musicians-article__sideBySide">
+          <p class="body-copy">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. </p>
+          <p class="body-copy"> From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
+          </div>
 
         </aside>
 
       </article>
+
+      </div>
 
     </section>
 
@@ -88,7 +96,9 @@
 
     <section class="photo-gallery">
 
-      <h3 class="photo-gallery__title">Photo Gallery</h3>
+      <h3 class="photo-gallery__title section-header">Photo Gallery</h3>
+
+      <div class="photo-gallery__box">
 
       <img class="photo-gallery__images" src="./assets/Images/Photo-gallery-1.jpg" alt="concert image 1">
       <img class="photo-gallery__images" src="./assets/Images/Photo-gallery-2.jpg" alt="concert image 2">
@@ -100,13 +110,15 @@
       <img class="photo-gallery__images" src="./assets/Images/Photo-gallery-8.jpg" alt="concert image 8">
       <img class="photo-gallery__images" src="./assets/Images/Photo-gallery-9.jpg" alt="concert image 9">
 
+      </div>
+
     </section>
 
 <!--------------footer section---------->
 
     <footer class="footer">
 
-      <h3 class="footer__headline">Get in Touch</h3>
+      <h3 class="footer__headline section-header">Get in Touch</h3>
 
 <!------------Social Links with images------------->
 
@@ -116,25 +128,30 @@
         <a class="footer__social-links--images" href="https://www.twitter.com"><img src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></a>
       </div>
 
-<!-----------Cam Adams Section-------------->
+      <div class="logo">  
+        <a class="logo__text" href="./index.html">BANDSITE</a>
+      </div>
 
-      <section class="footer__cam-adams">
+<!-----------Cam Adams Section-------------->
+    <div class="footer__information">
+
+      <section class="footer__cam-adams footer-stylings">
 
         <div class="footer__name-and-company">
 
-          <h4>Cam Adams</h4>
-          <h4>The Bees Knees Management</h4>
+          <h4 class="footer-text">Cam Adams</h4>
+          <h4 class="footer-text">The Bees Knees Management</h4>
 
         </div>
 
         <div class="footer__address">
 
-          <address>503 Broadways Penthouse,</address>
-          <address>York, NY, 10012, USA</address>
+          <address class="footer-text">503 Broadways Penthouse,</address>
+          <address class="footer-text">York, NY, 10012, USA</address>
 
         </div>
 
-          <p class="footer__email">info@thebeesknees.com</p>
+          <p class="footer__email footer-text">info@thebeesknees.com</p>
 
         </section>
 
@@ -144,47 +161,53 @@
 
           <div class="footer__name-and-company">
 
-            <h4>Pearl Gregg</h4>
-            <h4>Limitless Artist group</h4>
+            <h4 class="footer-text">Pearl Gregg</h4>
+            <h4 class="footer-text">Limitless Artist group</h4>
 
           </div>
 
           <div class="footer__address">
             
-            <address>Booking Agent for</address>
-            <address>US / South America / Japan</address>
+            <address class="footer-text">Booking Agent for</address>
+            <address class="footer-text">US / South America / Japan</address>
 
           </div>
 
-          <p class="footer__email">pearl.gregg@limitlessgregg.com</p>
+          <p class="footer__email footer-text">pearl.gregg@limitlessgregg.com</p>
 
         </section>
 
 <!-----Carson Whyte Section---------------->
 
-        <section class="footer__carson-whyte">
+        <section class="footer__carson-whyte footer-stylings">
 
           <div class="footer__name-and-company"> 
 
-            <h4>Carson Whyte</h4>
-            <h4>ARCH Entertainment</h4>
+            <h4 class="footer-text">Carson Whyte</h4>
+            <h4 class="footer-text">ARCH Entertainment</h4>
 
           </div>
 
           <div class="footer__address">
 
-            <address>Booking Agent for</address>
-            <address>UK / EU / AU</address>
+            <address class="footer-text">Booking Agent for</address>
+            <address class="footer-text">UK / EU / AU</address>
           </div>
 
-          <p class="footer__email">cwhyte@archentertainment.com</p>
+          <p class="footer__email footer-text">cwhyte@archentertainment.com</p>
 
         </section>
         
+      </div>
+        
 <!-------footer section----->
         <div class="footer__copyright">
-          
-          <p class="footer__copyright--text"> Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
+
+        <div class="logo">  
+          <a class="logo__text" href="./index.html">BANDSITE</a>
+        </div>
+
+          <p class="footer__copyright--text footer-text"> Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
 
         </div>
 

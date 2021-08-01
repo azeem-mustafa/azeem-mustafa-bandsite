@@ -2,48 +2,70 @@
 
 .musicians-article{
 
-    .section-header{
-        margin: 0;
-        padding: 1.5rem 1rem 1rem 1rem;
-        }
+    @include mobile-padding-sides;
+
+    @include tablet{
+        @include general-padding-headlines;
+    }
+
+    @include desktop{
+        @include desktop-padding-headlines;
+    }
 
     &__image{
         width: 100%;
-        @include mobile-general-padding-no-top;
         }
+    
+    &__content-box{
+
+        @include tablet{
+                @include padding-article-block;
+            }
+       
+        }
+        
 
     &__blockquote{
         display: flex;
         flex-direction: column;
         margin: 0;
-        @include mobile-general-padding-no-top;
+        padding-top: 1rem;
         }
-
-    &__quotation{
-        @include mobiletext--body;
-        width: 41ch;
-        font-weight: 600;
-        
-        &--author{
-            @include mobiletext--body;
-            font-weight: 600;
+    
+    @include tablet{
+            &__quotation--author{
+                font-size: 1rem;
+            }
+    
         }
-    }
 
      &__side-blocks{
          
          &--title{
-            margin-block-end: 0em;
-            @include mobiletext--subheader;
-             @include mobile-general-padding-no-top;
+
+            @include tablet{
+                font-weight: 600;
+            }
+            
+           
+
+            @include tablet{
+                }
+            }
+
+            @include tablet{
+                .musicians-article__sideBySide{
+                    display: flex;
+                }
             }
 
         p{
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        width: 45ch;
-        @include mobile-general-padding-no-top;
-        @include mobiletext--body;
+        
+            margin-right: 1rem;
+        
+        width: 80%;
+       
+
         }
     } 
 }

@@ -8,46 +8,144 @@
     flex-wrap: wrap;
     flex-direction: column;
     color: $white;
+    @include mobile-padding-sides;
+    border: yellow 2px solid;
+
+    @include tablet{
+        flex-direction: row;
+    }
 
 
     &__headline{
         color: $white;
         @include mobile-general-padding-headlines;
+        border: blue 2px solid;
+
+        @include tablet{
+            width: 33%;
+            }
         }
 
     //social logos
 
     &__social-links{
-        @include mobile-general-padding-no-top;
+        
+        display: flex;
+        border: green 2px solid;
+
+        @include tablet{
+            padding: 0;
+            width: 32%;
+        }
         
         &--images{
-                padding-right: 1rem;
+            border: red 2px solid;
+                padding-right: 2rem;
+                display: flex;
+
+                @include tablet{
+                    align-items: center;
+                }
+
+                img{
+                    height: 2rem;
+                }
+            }
+        }
+
+        .logo{
+            @include mobile{
+                display: none;
+
+                @include tablet{
+                    display: contents;
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     
     //address and contact info 
+    @include tablet{
+        
+        &__information{
+        display: flex;
+        border: yellow 3px solid;
+        width: 100%;
+        @include general-padding-headlines-no-top;
+
+        @include tablet{
+            padding-bottom: 0;
+        }
+
+        .footer-stylings{
+            margin-right: 1rem;
+                width: 30%;
+            border: yellowgreen 4px solid;
+            }
+        }
+    }
+
 
     &__name-and-company{
         h4{
             margin: 0;
+            font-weight: 600;
         }
-            @include mobile-general-padding-no-top
+
+        @include mobile-general-padding-no-top;
+
+        @include tablet{
+            @include footer-padding-between-text;
+        }
+        
+    
     }
 
     &__address{
             @include mobile-general-padding-no-top;
+
+            @include tablet{
+                @include footer-padding-between-text;
+            }
     }
 
     &__email{
             @include mobile-general-padding-no-top;
+
+            @include tablet{
+                padding: 0;
+            }
     }
+
+    /*reset address font default*/
+    address{
+        font-style: normal;
+    }
+
+
 
     // copyright section
 
      &__copyright{
+         display: contents;
+         
+         border: blue 2px solid;
+         
+
+         @include tablet{
+            .logo{
+                display: none;
+            }
+        }
 
         &--text{
-        @include mobile-general-padding-no-top;
-        }
-     }
+            margin-top: 0;
+            border: green solid 2px;
+
+            @include tablet;
+            @include general-padding-headlines-no-top;
+            }
+    }
+     
 }

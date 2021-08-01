@@ -1,14 +1,12 @@
 @use './partials/typography' as *;
 @use './partials/header' as *;
 @use './partials/footer' as *;
+@use './partials/mixin' as *;
 
 *, *::before, *::after{
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, li{
-    font-family: "AvenirNext LT Pro";
-}
 
 a{
     color: inherit;
@@ -19,3 +17,69 @@ ul{
     list-style-type: none;
 }
 
+
+/*typography styles*/
+
+.logo{
+    @include mobiletext--section-header;
+    font-weight: 400;
+
+    @include tablet{
+        @include section-header;
+        font-weight: 400;
+    }
+  }
+
+.nav-bar__link{
+    @include mobiletext--section-header;
+    font-weight: 400;
+
+    @include tablet{
+        @include section-header;
+        font-weight: 400;
+    }
+  }
+
+.page-header{
+    @include mobiletext--page-header;
+    margin: 0;
+
+    @include tablet{
+        @include page-header;
+    }
+}
+
+
+.section-header{
+    @include mobiletext--section-header;
+    margin-top: 0;
+
+    @include tablet{
+        @include section-header;
+    }
+}
+
+.subheader{
+    @include mobiletext--subheader;
+    
+    @include tablet{
+        @include subheader;
+    }
+    
+}
+
+.body-copy{
+    @include mobiletext--body;
+
+    @include tablet{
+        @include text-body;
+    }
+}
+
+.footer-text{
+    @include mobiletext--footer;
+
+    @include tablet{
+        @include text-footer;
+    }
+}

@@ -1,5 +1,6 @@
 @use './variable' as *;
 
+/*screen breakpoints*/
 
 @mixin mobile{
         @media (min-width: $breakpoint-mobile){
@@ -19,56 +20,69 @@
     }
 }
 
-@mixin mobiletext--page-header {
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  
-@mixin mobiletext--section-header{
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  
-  @mixin mobiletext--subheader{
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-  
-  @mixin mobiletext--body{
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 400;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-  }
-  
-  @mixin mobiletext--footer{
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 400;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-  }
-  
-  @mixin mobiletext--labels-buttons{
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 700;
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-  }
 
-
-  /*mobile layout*/
+  /*mobile padding layout*/
 
   @mixin mobile-general-padding-headlines{
     margin: 0;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1.5rem 0rem 1rem 0rem;
   }
     
   @mixin mobile-general-padding-no-top{
     padding: 0rem 1rem 1rem 1rem;
+  }
+
+  @mixin mobile-padding-sides {
+    padding: 0rem 1rem;
+    
+  }
+
+  /*tablet padding layout*/
+
+  @mixin general-padding-headlines{
+    margin: 0;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+
+  @mixin padding-article-block {
+    padding: 0 3.5rem;
+  }
+
+  @mixin general-padding-headlines-no-top{
+    margin: 0;
+    padding: 0rem 2.25rem 2.25rem 2.25rem;
+  }
+
+  @mixin photo-gallery-padding{
+    margin: 0;
+    padding: 0rem 0rem 1.25rem 2.25rem;
+  }
+
+  @mixin footer-padding-between-text{
+    padding: 0rem 0rem 2.25rem 0rem;
+  }
+
+
+  /*desktop padding*/
+
+  @mixin desktop-padding-headlines{
+    margin: 0;
+    padding: 4rem 10rem;
+  }
+
+
+  @mixin desktop-article-block-padding{
+    padding: 0 15rem;
+  }
+
+  @mixin desktop-photo-gallery-padding{
+    margin: 0;
+    padding: 0rem 10rem;
+  }
+
+  /*margin reset*/
+
+  @mixin margin-reset{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
   }
