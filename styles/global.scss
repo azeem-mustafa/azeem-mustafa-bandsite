@@ -1,12 +1,16 @@
 @use './partials/typography' as *;
-@use './partials/header' as *;
-@use './partials/footer' as *;
-@use './partials/mixin' as *;
+@use './partials/components-global/header' as *;
+@use './partials/components-global/footer' as *;
+@use './partials/mixins/mixin' as *;
+@use './partials/mixins/mixins-paddings' as *;
+
+/*setting all content to fit inside respective boxes*/
 
 *, *::before, *::after{
     box-sizing: border-box;
 }
 
+/*changing default list items to neutral settings*/
 
 a{
     color: inherit;
@@ -20,48 +24,6 @@ ul{
 
 /*typography styles*/
 
-.logo{
-    @include mobiletext--section-header;
-    font-weight: 400;
-
-    @include tablet{
-        @include section-header;
-        font-weight: 400;
-    }
-  }
-
-.footer__logo-nonMobile{
-    display: none;
-
-    @include tablet{
-        display: contents;
-        @include section-header;
-        font-weight: 400;
-    }
-}
-
-.footer__logo{
-    @include mobiletext--section-header;
-    font-weight: 400;
-
-    @include tablet{
-        display: none;
-
-        @include desktop{
-            display: none;
-        }
-    }
-}
-
-.nav-bar__link{
-    @include mobiletext--section-header;
-    font-weight: 400;
-
-    @include tablet{
-        @include subheader;
-        font-weight: 400;
-    }
-  }
 
 .page-header{
     @include mobiletext--page-header;
@@ -71,7 +33,6 @@ ul{
         @include page-header;
     }
 }
-
 
 .section-header{
     @include mobiletext--section-header;
@@ -106,5 +67,51 @@ ul{
 
     @include tablet{
         @include text-footer;
+    }
+}
+
+/*specific typography I believe needed tweaking, including the logo at the top and bottom of the page and nav items*/
+
+.header__logo{
+    @include mobiletext--section-header;
+    font-weight: 400;
+
+    @include tablet{
+        @include section-header;
+        font-weight: 400;
+    }
+  }
+
+  .nav-bar__link{
+    @include mobiletext--section-header;
+    font-weight: 400;
+
+    @include tablet{
+        @include subheader;
+        font-weight: 400;
+    }
+  }
+
+
+.footer__logo-nonMobile{
+    display: none;
+
+    @include tablet{
+        display: contents;
+        @include section-header;
+        font-weight: 400;
+    }
+}
+
+.footer__logo{
+    @include mobiletext--section-header;
+    font-weight: 400;
+
+    @include tablet{
+        display: none;
+
+        @include desktop{
+            display: none;
+        }
     }
 }

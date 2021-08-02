@@ -1,6 +1,7 @@
-@use './mixin' as *;
-@use './variable' as *;
-@use './typography' as *;
+@use '../mixins/mixin' as *;
+@use '../variable' as *;
+@use '../typography' as *;
+@use '../mixins/mixins-paddings' as *;
 
 .footer{
     background-color: $black;
@@ -9,7 +10,6 @@
     flex-direction: column;
     color: $white;
     @include mobile-padding-sides;
-    border: yellow 2px solid;
 
     @include tablet{
         flex-direction: row;
@@ -24,7 +24,6 @@
     &__headline{
         color: $white;
         @include mobile-general-padding-headlines;
-        border: blue 2px solid;
 
         @include tablet{
             width: 33%;
@@ -36,7 +35,6 @@
     &__social-links{
         
         display: flex;
-        border: green 2px solid;
         padding-bottom: 1rem;
 
         @include tablet{
@@ -45,46 +43,38 @@
         }
         
         &--images{
-            border: red 2px solid;
-                padding-right: 2rem;
-                display: flex;
 
-                @include tablet{
-                    align-items: center;
-                }
+            padding-right: 2rem;
+            display: flex;
 
-                img{
-                    height: 2rem;
+            @include tablet{
+                align-items: center;
+            }
+            img{
+                height: 2rem;
                 }
             }
         }
 
     &__logo-text-nonMobile{
+
         align-self: center;
         flex-grow: 2;
         text-align: right;
-        
     }
     
     //address and contact info 
+
     @include tablet{
         
         &__information{
         display: flex;
-        border: yellow 3px solid;
         width: 100%;
-
-        @include tablet{
-            padding-bottom: 0;
-        }
 
         .footer-stylings{
             margin-right: 1rem;
-                width: 30%;
-            border: yellowgreen 4px solid;
+            width: 30%;
             flex-grow: 2;
-
-            
             }
         }
     }
@@ -98,56 +88,53 @@
 
         @include mobile-footer-padding-between-contacts;
 
-      
         @include tablet{
-            @include footer-padding-between-text;
+            @include tablet-footer-padding-between-text;
         }
         
-    
     }
 
     &__address{
 
-            @include tablet{
-                @include footer-padding-between-text;
-            }
+        @include tablet{
+
+            @include tablet-footer-padding-between-text;
+        }
     }
 
     &__email{
-      
 
-            @include tablet{
-                padding: 0;
-            }
+        @include tablet{
+            margin-top: 0;
+        }
     }
 
-    /*reset address font default*/
+    /*reset address font from italic to default*/
+
     address{
         font-style: normal;
     }
 
-
-
     // copyright section
 
      &__copyright{
-         border: blue 2px solid;
 
          &--text{
             margin-top: 0;
-            border: green solid 2px;
+
+            @include tablet{
+                margin-top: 1rem;
             }
         }
+
     &__logo--text-two{
         max-height: 1.25rem;
         max-width: 7.5rem;
         padding-bottom: 1rem;
 
-                @include tablet{
-                    display: none;
-                }
-    }
-
-    
-     
+        @include tablet{
+            display: none;
+            }
+        }
+    }      
 }

@@ -1,0 +1,43 @@
+@use '../mixins/mixin' as *;
+@use '../mixins/mixins-paddings' as *;
+@use '../variable' as *;
+
+
+.photo-gallery{
+    background-color: $alabaster;
+
+/*padding layout*/
+
+    @include mobile-padding-sides;
+
+    @include tablet{
+        @include tablet-padding-sides;
+    }
+
+    @include desktop{
+        @include desktop-photo-gallery-padding;
+    }
+
+/*box to contain 3 x 3 images in tablet and desktop view*/
+
+    @include tablet{
+        &__box{
+           width: 100%;
+        }
+    }
+
+/*images*/
+
+    &__images{
+        padding-bottom: 1rem;
+        width: 100%;
+        @include tablet{
+            padding-right: 1rem;
+            width: calc(33% - 0.1rem);     
+        }
+        @include desktop{
+            padding-right: 1rem;
+            width: calc(33% - 0.1rem)
+        }  
+    }
+}

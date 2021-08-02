@@ -2,10 +2,10 @@
 /*primary colors*/
 /*secondary colors*/
 /*screen breakpoints*/
+/*margin reset*/
 /*mobile padding layout*/
 /*tablet padding layout*/
 /*desktop padding*/
-/*margin reset*/
 .hero-img {
   display: flex;
   align-items: center;
@@ -24,12 +24,12 @@
 .hero-img__page-title {
   position: absolute;
   color: #ffffff;
+  /*padding for text in hero img*/
   padding: 0rem 1rem;
 }
 @media (min-width: 48rem) {
   .hero-img__page-title {
-    margin: 0;
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 0rem 2.25rem;
   }
 }
 @media (min-width: 80rem) {
@@ -40,18 +40,21 @@
 }
 
 .musicians-article {
+  /*padding layout for page*/
   padding: 0rem 1rem;
+  /*main image in section*/
+  /*offset contain for artices and content when in desktop and tablet view*/
+  /*quote under image*/
+  /*text block section */
 }
 @media (min-width: 48rem) {
   .musicians-article {
-    margin: 0;
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 0rem 2.25rem;
   }
 }
 @media (min-width: 80rem) {
   .musicians-article {
-    margin: 0;
-    padding: 4rem 10rem;
+    padding: 0rem 10rem;
   }
 }
 .musicians-article__image {
@@ -60,6 +63,11 @@
 @media (min-width: 48rem) {
   .musicians-article__content-box {
     padding: 0 3.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .musicians-article__content-box {
+    padding: 0 5rem;
   }
 }
 .musicians-article__blockquote {
@@ -90,18 +98,14 @@
 
 .photo-gallery {
   background-color: #FAFAFA;
+  /*padding layout*/
   padding: 0rem 1rem;
+  /*box to contain 3 x 3 images in tablet and desktop view*/
+  /*images*/
 }
 @media (min-width: 48rem) {
   .photo-gallery {
-    margin: 0;
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
-  }
-}
-@media (min-width: 48rem) {
-  .photo-gallery__box {
-    border: blue 3px solid;
-    width: 100%;
+    padding: 0rem 2.25rem;
   }
 }
 @media (min-width: 80rem) {
@@ -110,21 +114,24 @@
     padding: 0rem 10rem;
   }
 }
+@media (min-width: 48rem) {
+  .photo-gallery__box {
+    width: 100%;
+  }
+}
 .photo-gallery__images {
   padding-bottom: 1rem;
   width: 100%;
 }
 @media (min-width: 48rem) {
   .photo-gallery__images {
-    margin-right: 1rem;
-    width: 30%;
+    padding-right: 1rem;
+    width: calc(33% - 0.1rem);
   }
 }
 @media (min-width: 80rem) {
   .photo-gallery__images {
-    padding: 0;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    width: calc(33% - 1.25rem);
+    padding-right: 1rem;
+    width: calc(33% - 0.1rem);
   }
 }/*# sourceMappingURL=bio.css.map */

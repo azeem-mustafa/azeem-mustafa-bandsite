@@ -1,0 +1,29 @@
+@use '../variable' as *;
+
+/*screen breakpoints*/
+
+@mixin mobile{
+        @media (min-width: $breakpoint-mobile){
+            @content;
+        }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+
+  /*margin reset*/
+
+  @mixin margin-reset{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }

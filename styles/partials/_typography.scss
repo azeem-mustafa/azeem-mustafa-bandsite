@@ -1,4 +1,4 @@
-@use './mixin' as *;
+@use './mixins/mixin' as *;
 
 @font-face {
     font-family: 'AvenirNext LT Pro';
@@ -75,7 +75,7 @@
 
 
   
-/*desktop fonts*/
+/*tablet and desktop fonts*/
 
 @mixin page-header {
   font-family: 'AvenirNext LT Pro';

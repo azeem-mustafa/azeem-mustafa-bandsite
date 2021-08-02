@@ -1,5 +1,6 @@
-@use './mixin' as *;
-@use './variable' as *;
+@use '../mixins/mixin' as *;
+@use '../mixins/mixins-paddings' as *;
+@use '../variable' as *;
 
 .hero-img{
     display: flex;
@@ -8,7 +9,7 @@
 
     &__background{
         width: 100%;
-    }
+        }
 
     &__overlay{
     background-color: $black;
@@ -16,22 +17,22 @@
     height: 100%;
     opacity: 0.5;
     position: absolute;
-
     }
-
 
     &__page-title{
         position: absolute;
         color: $white;
+
+        /*padding for text in hero img*/
+        
         @include mobile-padding-sides;
 
         @include tablet{
-            @include general-padding-headlines;
+            @include tablet-padding-sides;
         }
 
         @include desktop{
             @include desktop-padding-headlines;
         }
-
     }
 }

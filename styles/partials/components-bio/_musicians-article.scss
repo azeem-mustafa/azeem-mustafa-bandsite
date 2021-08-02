@@ -1,46 +1,57 @@
-@use './mixin' as *;
+@use '../mixins/mixin' as *;
+@use '../mixins/mixins-paddings' as *;
 
 .musicians-article{
+
+    /*padding layout for page*/
 
     @include mobile-padding-sides;
 
     @include tablet{
-        @include general-padding-headlines;
+        @include tablet-padding-sides;
     }
 
     @include desktop{
-        @include desktop-padding-headlines;
+        @include desktop-padding-sides;
     }
 
-    
+    /*main image in section*/
 
     &__image{
         width: 100%;
-        }
+    }
+
+    /*offset contain for artices and content when in desktop and tablet view*/
     
     &__content-box{
 
         @include tablet{
-                @include padding-article-block;
-            }
-       
-        }
-        
 
+            @include tablet-padding-article-block;
+            }
+
+            @include desktop{
+                @include desktop-article-block-padding;
+            }
+        }
+    
+    /*quote under image*/
+        
     &__blockquote{
         display: flex;
         flex-direction: column;
         margin: 0;
         padding-top: 1rem;
-        }
+    }
     
     @include tablet{
-            &__quotation--author{
-                font-size: 1rem;
-            }
-    
+        &__quotation--author{
+        font-size: 1rem;
         }
+    }
 
+    /*text block section */
+    
      &__side-blocks{
          
          &--title{
@@ -48,12 +59,7 @@
             @include tablet{
                 font-weight: 600;
             }
-            
-           
-
-            @include tablet{
-                }
-            }
+        }
 
             @include tablet{
                 .musicians-article__sideBySide{
@@ -63,11 +69,8 @@
 
         p{
         
-            margin-right: 1rem;
-        
+        margin-right: 1rem;
         width: 80%;
-       
-
         }
     } 
 }
