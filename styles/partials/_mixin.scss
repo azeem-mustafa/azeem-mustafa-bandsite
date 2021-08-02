@@ -34,7 +34,10 @@
 
   @mixin mobile-padding-sides {
     padding: 0rem 1rem;
-    
+  }
+
+  @mixin mobile-footer-padding-between-contacts{
+    padding-bottom: 1rem;
   }
 
   /*tablet padding layout*/
@@ -48,9 +51,9 @@
     padding: 0 3.5rem;
   }
 
-  @mixin general-padding-headlines-no-top{
+  @mixin tablet-padding-headlines{
     margin: 0;
-    padding: 0rem 2.25rem 2.25rem 2.25rem;
+    padding: 2.25rem 0rem;
   }
 
   @mixin photo-gallery-padding{
@@ -60,6 +63,10 @@
 
   @mixin footer-padding-between-text{
     padding: 0rem 0rem 2.25rem 0rem;
+  }
+
+  @mixin tablet-padding-sides{
+    padding: 0rem 2.25rem;
   }
 
 
@@ -77,6 +84,10 @@
 
   @mixin desktop-photo-gallery-padding{
     margin: 0;
+    padding: 0rem 10rem;
+  }
+
+  @mixin desktop-padding-sides{
     padding: 0rem 10rem;
   }
 

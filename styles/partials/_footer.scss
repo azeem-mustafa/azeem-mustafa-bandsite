@@ -13,6 +13,11 @@
 
     @include tablet{
         flex-direction: row;
+        @include tablet-padding-sides;
+
+        @include desktop{
+            @include desktop-padding-sides;
+        }
     }
 
 
@@ -32,6 +37,7 @@
         
         display: flex;
         border: green 2px solid;
+        padding-bottom: 1rem;
 
         @include tablet{
             padding: 0;
@@ -53,17 +59,12 @@
             }
         }
 
-        .logo{
-            @include mobile{
-                display: none;
-
-                @include tablet{
-                    display: contents;
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
+    &__logo-text-nonMobile{
+        align-self: center;
+        flex-grow: 2;
+        text-align: right;
+        
+    }
     
     //address and contact info 
     @include tablet{
@@ -72,7 +73,6 @@
         display: flex;
         border: yellow 3px solid;
         width: 100%;
-        @include general-padding-headlines-no-top;
 
         @include tablet{
             padding-bottom: 0;
@@ -82,6 +82,9 @@
             margin-right: 1rem;
                 width: 30%;
             border: yellowgreen 4px solid;
+            flex-grow: 2;
+
+            
             }
         }
     }
@@ -93,8 +96,9 @@
             font-weight: 600;
         }
 
-        @include mobile-general-padding-no-top;
+        @include mobile-footer-padding-between-contacts;
 
+      
         @include tablet{
             @include footer-padding-between-text;
         }
@@ -103,7 +107,6 @@
     }
 
     &__address{
-            @include mobile-general-padding-no-top;
 
             @include tablet{
                 @include footer-padding-between-text;
@@ -111,7 +114,7 @@
     }
 
     &__email{
-            @include mobile-general-padding-no-top;
+      
 
             @include tablet{
                 padding: 0;
@@ -128,24 +131,23 @@
     // copyright section
 
      &__copyright{
-         display: contents;
-         
          border: blue 2px solid;
-         
 
-         @include tablet{
-            .logo{
-                display: none;
-            }
-        }
-
-        &--text{
+         &--text{
             margin-top: 0;
             border: green solid 2px;
-
-            @include tablet;
-            @include general-padding-headlines-no-top;
             }
+        }
+    &__logo--text-two{
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        padding-bottom: 1rem;
+
+                @include tablet{
+                    display: none;
+                }
     }
+
+    
      
 }

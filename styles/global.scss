@@ -30,12 +30,35 @@ ul{
     }
   }
 
+.footer__logo-nonMobile{
+    display: none;
+
+    @include tablet{
+        display: contents;
+        @include section-header;
+        font-weight: 400;
+    }
+}
+
+.footer__logo{
+    @include mobiletext--section-header;
+    font-weight: 400;
+
+    @include tablet{
+        display: none;
+
+        @include desktop{
+            display: none;
+        }
+    }
+}
+
 .nav-bar__link{
     @include mobiletext--section-header;
     font-weight: 400;
 
     @include tablet{
-        @include section-header;
+        @include subheader;
         font-weight: 400;
     }
   }
@@ -52,10 +75,12 @@ ul{
 
 .section-header{
     @include mobiletext--section-header;
+    @include mobile-general-padding-headlines;
     margin-top: 0;
 
     @include tablet{
         @include section-header;
+        @include tablet-padding-headlines;
     }
 }
 

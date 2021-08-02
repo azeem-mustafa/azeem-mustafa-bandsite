@@ -204,6 +204,12 @@ body {
 @media (min-width: 48rem) {
   .footer {
     flex-direction: row;
+    padding: 0rem 2.25rem;
+  }
+}
+@media (min-width: 48rem) and (min-width: 80rem) {
+  .footer {
+    padding: 0rem 10rem;
   }
 }
 .footer__headline {
@@ -220,6 +226,7 @@ body {
 .footer__social-links {
   display: flex;
   border: green 2px solid;
+  padding-bottom: 1rem;
 }
 @media (min-width: 48rem) {
   .footer__social-links {
@@ -240,25 +247,16 @@ body {
 .footer__social-links--images img {
   height: 2rem;
 }
-@media (min-width: 20rem) {
-  .footer .logo {
-    display: none;
-  }
-}
-@media (min-width: 20rem) and (min-width: 48rem) {
-  .footer .logo {
-    display: contents;
-    display: flex;
-    align-items: center;
-  }
+.footer__logo-text-nonMobile {
+  align-self: center;
+  flex-grow: 2;
+  text-align: right;
 }
 @media (min-width: 48rem) {
   .footer__information {
     display: flex;
     border: yellow 3px solid;
     width: 100%;
-    margin: 0;
-    padding: 0rem 2.25rem 2.25rem 2.25rem;
   }
 }
 @media (min-width: 48rem) and (min-width: 48rem) {
@@ -271,10 +269,11 @@ body {
     margin-right: 1rem;
     width: 30%;
     border: yellowgreen 4px solid;
+    flex-grow: 2;
   }
 }
 .footer__name-and-company {
-  padding: 0rem 1rem 1rem 1rem;
+  padding-bottom: 1rem;
 }
 .footer__name-and-company h4 {
   margin: 0;
@@ -285,16 +284,10 @@ body {
     padding: 0rem 0rem 2.25rem 0rem;
   }
 }
-.footer__address {
-  padding: 0rem 1rem 1rem 1rem;
-}
 @media (min-width: 48rem) {
   .footer__address {
     padding: 0rem 0rem 2.25rem 0rem;
   }
-}
-.footer__email {
-  padding: 0rem 1rem 1rem 1rem;
 }
 @media (min-width: 48rem) {
   .footer__email {
@@ -305,20 +298,23 @@ body {
   font-style: normal;
 }
 .footer__copyright {
-  display: contents;
   border: blue 2px solid;
-}
-@media (min-width: 48rem) {
-  .footer__copyright .logo {
-    display: none;
-  }
 }
 .footer__copyright--text {
   margin-top: 0;
   border: green solid 2px;
-  margin: 0;
-  padding: 0rem 2.25rem 2.25rem 2.25rem;
 }
+.footer__logo--text-two {
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__logo--text-two {
+    display: none;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -350,6 +346,38 @@ ul {
   }
 }
 
+.footer__logo-nonMobile {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .footer__logo-nonMobile {
+    display: contents;
+    font-family: "AvenirNext LT Pro";
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 400;
+  }
+}
+
+.footer__logo {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+@media (min-width: 48rem) {
+  .footer__logo {
+    display: none;
+  }
+}
+@media (min-width: 48rem) and (min-width: 80rem) {
+  .footer__logo {
+    display: none;
+  }
+}
+
 .nav-bar__link {
   font-family: "AvenirNext LT Pro";
   font-weight: 700;
@@ -360,9 +388,9 @@ ul {
 @media (min-width: 48rem) {
   .nav-bar__link {
     font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 400;
   }
 }
@@ -388,6 +416,8 @@ ul {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
+  margin: 0;
+  padding: 1.5rem 0rem 1rem 0rem;
   margin-top: 0;
 }
 @media (min-width: 48rem) {
@@ -396,6 +426,8 @@ ul {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.75rem;
+    margin: 0;
+    padding: 2.25rem 0rem;
   }
 }
 
