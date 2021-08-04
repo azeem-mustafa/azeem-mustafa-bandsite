@@ -1,0 +1,40 @@
+/**screen breakpoints*/
+/*primary colors*/
+/*secondary colors*/
+/*screen breakpoints*/
+/*margin reset*/
+/*mobile padding layout*/
+/*tablet padding layout*/
+/*desktop padding*/
+.hero-img {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero-img__background {
+  width: 100%;
+}
+.hero-img__overlay {
+  background-color: #323232;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+}
+.hero-img__page-title {
+  position: absolute;
+  color: #ffffff;
+  /*padding for text in hero img*/
+  padding: 0rem 1rem;
+}
+@media (min-width: 48rem) {
+  .hero-img__page-title {
+    padding: 0rem 2.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .hero-img__page-title {
+    margin: 0;
+    padding: 4rem 10rem;
+  }
+}/*# sourceMappingURL=show.css.map */
