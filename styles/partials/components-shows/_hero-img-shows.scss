@@ -1,0 +1,47 @@
+@use '../variable' as *;
+@use '../mixins/mixin' as *;
+@use '../mixins/mixins-paddings' as *;
+
+.hero-img{
+    height: 100vh;
+    border: blue 4px solid;
+    background-image: url(../../../assets/Images/hero-shows.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+   
+
+     &__overlay{
+        background-color:$black;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        }
+    &__text-box{
+        @include mobile-padding-sides;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__small-title{
+        color: $white;
+        z-index: 2;
+    }
+
+    &__page-title{
+        color: $white;
+        z-index: 2;
+    }
+
+    &__soundcloud{
+        z-index: 2;
+    }
+
+    
+  
+    
+}

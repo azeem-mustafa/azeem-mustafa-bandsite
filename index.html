@@ -10,14 +10,14 @@
 </head>
 <body>
 
-  <!------------Header Section-------------->
-  <header>
+  <!--Header Section-->
+  <header class="header">
 
         <div class="header__wrapper">
 
         <div class="header__logo">
             
-            <a class="header__logo--text" href="./index.html">BANDSITE</a>
+            <img src="./assets/Logo/Logo-bandsite.svg" class="header__logo-text" href="./index.html">
 
         </div>
 
@@ -40,7 +40,7 @@
 
   <Main>
 
-<!--------------Main Hero Banner------------->
+<!--Main Hero Banner-->
 
     <section class="hero-img">
 
@@ -52,7 +52,7 @@
     </section>
 
 
-<!----------Image and headline about Bees Knees------------->
+<!--Image and headline about Bees Knees-->
     <section class="musicians-article">
           
       <h3 class="muscians-article__title section-header">About the Musicians</h3>   
@@ -61,24 +61,24 @@
 
         <img class="musicians-article__image" src="./assets/Images/band.jpg" alt="band image">
 
-<!-----------quote under photo musicians-------------->
+<!--quote under photo musicians-->
 
         <blockquote class="musicians-article__blockquote">
 
-          <q class="musicians-article__quotation subheader">We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board</q>
-          <p class="musicians-article__quotation--author subheader">- Bryan Teddy, lead vocalist of The Bees Knees</p>
+          <p class="musicians-article__quotation subheader">We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board</p>
+          <p class="musicians-article__quotation--author subheader">- Bryan Teddy, lead vocalist of The Bees Knees</p><!------------------fix this-->
 
         </blockquote>
 
-<!------------Written article about musicans------>
+<!--Written article about musicans-->           <!--fix all comments-->
 
         <article class="musicians-article__written-block">
 
           <aside class="musicians-article__side-blocks">
 
-            <h3 class="musicians-article__side-blocks--title subheader">The Bees Knees</h3>
+            <h3 class="musicians-article__side-blocks-title subheader">The Bees Knees</h3>
             
-            <div class="musicians-article__sideBySide">
+            <div class="musicians-article__side-by-side">
               
               <p class="body-copy">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. </p>
               <p class="body-copy"> From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
@@ -93,7 +93,7 @@
 
     </section>
 
-<!---------------Photo Gallery-------->
+<!--Photo Gallery-->
 
     <section class="photo-gallery">
 
@@ -115,7 +115,16 @@
 
     </section>
 
-<!--------------footer section---------->
+    <section class="comments">
+      <h2 class="comments__header section-header">Join the Conversation</h2>
+        <div class="comments__block">
+          
+          
+        </div>
+
+    </section>
+
+<!--footer section-->
 
     <footer class="footer">
 
@@ -124,14 +133,14 @@
 <!------------Social Links with images------------->
 
       <div class="footer__social-links">
-        <a class="footer__social-links--images" href="https://www.Instagram.com"><img src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram Logo"></a>
-        <a class="footer__social-links--images" href="https://www.facebook.com"><img src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook Logo"></a>  
-        <a class="footer__social-links--images" href="https://www.twitter.com"><img src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></a>
+        <a class="footer__social-links-images" href="https://www.Instagram.com"><img src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram Logo"></a> <!--dont use modified-->
+        <a class="footer__social-links-images" href="https://www.facebook.com"><img src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook Logo"></a>  
+        <a class="footer__social-links-images" href="https://www.twitter.com"><img src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></a>
       </div>
 
-      <div class="footer__logo-nonMobile">  
+      <div class="footer__logo-non-mobile">  
 
-        <a class="footer__logo-text-nonMobile" href="./index.html">BANDSITE</a>
+        <img src="./assets/Logo/Logo-bandsite.svg" class="footer__logo-text-non-mobile" href="./index.html"><!---fix it so it doesnt show up in mobile-->
 
       </div>
 
@@ -142,15 +151,15 @@
 
         <div class="footer__name-and-company">
 
-          <h4 class="footer-text">Cam Adams</h4>
-          <h4 class="footer-text">The Bees Knees Management</h4>
+          <h4 class="footer__name footer-text">Cam Adams</h4>
+          <h4 class="footer__company footer-text">The Bees Knees Management</h4>
 
         </div>
 
         <div class="footer__address">
 
-          <address class="footer-text">503 Broadways Penthouse,</address>
-          <address class="footer-text">York, NY, 10012, USA</address>
+          <address class="footer__address-street footer-text">503 Broadways Penthouse,</address>
+          <address class="footer__address-city footer-text">York, NY, 10012, USA</address>
 
         </div>
 
@@ -164,15 +173,15 @@
 
           <div class="footer__name-and-company">
 
-            <h4 class="footer-text">Pearl Gregg</h4>
-            <h4 class="footer-text">Limitless Artist group</h4>
+            <h4 class="footer__name footer-text">Pearl Gregg</h4>
+            <h4 class="footer__company footer-text">Limitless Artist group</h4>
 
           </div>
 
           <div class="footer__address">
             
-            <address class="footer-text">Booking Agent for</address>
-            <address class="footer-text">US / South America / Japan</address>
+            <address class="footer__address-street footer-text">Booking Agent for</address>
+            <address class="footer__address-city footer-text">US / South America / Japan</address>
 
           </div>
 
@@ -186,15 +195,15 @@
 
           <div class="footer__name-and-company"> 
 
-            <h4 class="footer-text">Carson Whyte</h4>
-            <h4 class="footer-text">ARCH Entertainment</h4>
+            <h4 class="footer__name footer-text">Carson Whyte</h4>
+            <h4 class="footer__company footer-text">ARCH Entertainment</h4>
 
           </div>
 
           <div class="footer__address">
 
-            <address class="footer-text">Booking Agent for</address>
-            <address class="footer-text">UK / EU / AU</address>
+            <address class="footer__address-street footer-text">Booking Agent for</address>
+            <address class="footer__address-city footer-text">UK / EU / AU</address>
           </div>
 
           <p class="footer__email footer-text">cwhyte@archentertainment.com</p>
@@ -208,11 +217,11 @@
 
           <div class="footer__logo">  
 
-            <a class="footer__logo-text" href="./index.html">BANDSITE</a>
+            <img src="./assets/Logo/Logo-bandsite.svg" class="footer__logo-text" href="./index.html">
 
           </div>
 
-          <p class="footer__copyright--text footer-text"> Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
+          <p class="footer__copyright-text footer-text"> Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
 
         </div>
 
@@ -220,5 +229,6 @@
 
   </Main>
     
+  <script src="./scripts/index-page.js"></script>
 </body>
 </html>

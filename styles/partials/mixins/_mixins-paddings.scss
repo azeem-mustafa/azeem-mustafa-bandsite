@@ -1,7 +1,7 @@
 /*mobile padding layout*/
 
 @mixin mobile-general-padding-headlines{
-    margin: 0;
+    
     padding: 1.5rem 0rem 1rem 0rem;
   }
     
@@ -20,12 +20,12 @@
   /*tablet padding layout*/
 
   @mixin tablet-padding-nav{
-    margin: 0;
+    
     padding: 3rem 2.25em 2.25rem 2.25rem;
   }
 
   @mixin tablet-padding-headlines{
-    margin: 0;
+    
     padding: 3rem 0em 2.25rem 0rem;
   }
 

@@ -27,7 +27,7 @@ ul{
 
 .page-header{
     @include mobiletext--page-header;
-    margin: 0;
+   
 
     @include tablet{
         @include page-header;
@@ -37,7 +37,7 @@ ul{
 .section-header{
     @include mobiletext--section-header;
     @include mobile-general-padding-headlines;
-    margin-top: 0;
+   
 
     @include tablet{
         @include section-header;

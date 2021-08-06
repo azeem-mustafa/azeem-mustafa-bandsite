@@ -29,7 +29,7 @@ header{
                 @include desktop-padding-headlines;
                 }
 
-            &--text{
+            &-text{
                 align-items: center;
                 max-height: 1.25rem;
                 max-width: 7.5rem;
@@ -68,7 +68,8 @@ header{
                 text-align: center;
 
                 &--selected{
-                    border-bottom: $alabaster 0.625rem solid;
+                    text-decoration: underline;
+                    text-underline-offset: 50%;
                     color: $white;
         
                 }
