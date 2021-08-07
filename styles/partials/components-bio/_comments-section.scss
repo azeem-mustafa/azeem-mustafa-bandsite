@@ -1,9 +1,11 @@
 @use '../variable' as *;
 @use '../mixins/mixins-paddings' as *;
+@use '../mixins/mixin' as *;
 
 
 .comments{
     @include mobile-padding-sides;
+    border: black 3px solid;
     display: flex;
     flex-direction: column;
     background-color: $alabaster;
@@ -13,21 +15,60 @@
         flex-direction: column;
     }
 
-    &__subheader{
-        color: $mercury;
+    &__form-flex{
+        display: flex;
     }
 
+    /*written text area*/
+    &__form-img-box{
+        display: flex;
+        
+    }
 
+    &__form-avatar{
+    border-radius: 50%;
+    max-height: 2.25rem;
+    width: 2.25rem;
+    }
+
+    /*comment section*/
+
+    &__comment-box{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        @include mobile-padding-sides;
+    }
+    &__form-label{
+        color: $black; /*change this*/
+        padding-bottom: 0.25rem;
+    }
+
+    &__avatar-placeholder{
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: $mercury;
+    }
+    &__form-label{
+        color: green;
+    }
+
+    &__name{
+        @include form-field;
+        background-color: $mercury
+    }
+
+    &__text-area{
+        @include form-field;
+        background-color: $mercury;
+    }
 
     &__button{
-        border-radius: 0.3rem;
-        height: 2.5rem;
-        color: $white;
-        background-color: $black;
-        
-        
-        &:hover{
-            background-color: $darkBlack;
-        }
+        @include button;
      }
+
+    &__divider{
+        @include divider;
+    }
 }

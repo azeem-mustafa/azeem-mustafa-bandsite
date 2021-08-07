@@ -1,52 +1,36 @@
+let comments = [
+    {
+        img: '#',
+        name: 'Connor Walton',
+        date: '02/17/2021',
+        comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
+    },
+    {
+        img: '#',
+        name: 'Emilie Beach',
+        date: '01/09/2021',
+        comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
+    },
+    {
+        img: '#',
+        name: 'Miles Acosta',
+        date: '12/20/2020',
+        comment: `I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.`
+    },
+]
+
+
 const commentBlock = document.querySelector('.comments__block');
 
-/*Add image*/
 
 
-const commentsAvatar = document.createElement('img');
-commentsAvatar.classList.add('comments__avatar');
+const form = document.querySelector('.comments__form');
+form.addEventListener('submit', function(event){
+    event.preventDefault();
 
-commentBlock.appendChild(commentsAvatar);
+    console.log(event.target.form);
+});
 
-/*Name Field*/
-
-const commentsNameHeader = document.createElement('label');
-commentsNameHeader.classList.add('comments__subheader');
-commentsNameHeader.innerText = 'NAME';
-
-commentBlock.appendChild(commentsNameHeader);
-
-const commentsNameForm = document.createElement('input');
-commentsNameForm.classList.add('comments__fullName');
-
-
-commentBlock.appendChild(commentsNameForm);
-document.querySelector(".comments__fullName").placeholder = 'Enter Your Name';
-
-/*comment section*/
-
-const commentsTextAreaHeader = document.createElement('label');
-commentsTextAreaHeader.classList.add('comments__subheader');
-commentsTextAreaHeader.innerText = 'COMMENT';
-
-commentBlock.appendChild(commentsTextAreaHeader);
-
-/*comment section text area*/
-
-const commentsTextArea = document.createElement('textarea');
-commentsTextArea.classList.add('comments__text-area');
-
-commentBlock.appendChild(commentsTextArea);
-
-document.querySelector(".comments__text-area").placeholder = 'Add New Comment';
-
-/*button section*/
-
-const commentBtn = document.createElement('button');
-commentBtn.classList.add('comments__button');
-commentBtn.innerText = 'COMMENT';
-
-commentBlock.appendChild(commentBtn);
 
 /*divider*/
 
@@ -61,39 +45,79 @@ commentBlock.appendChild(divider);
 
 /*listed comments section*/
 
+const listedCommentsBlock = document.createElement('div');
+listedCommentsBlock.classList.add('comments__listed-block');
+
+commentBlock.appendChild(listedCommentsBlock);
+
+
+const generateListedComments = (commentsData) => {
+
 const listedCommentsSection = document.createElement('section');
 listedCommentsSection.classList.add('comments__listed-comments-section');
 
-commentBlock.appendChild(listedCommentsSection);
+listedCommentsBlock.appendChild(listedCommentsSection);
 
-/*actual listed comments*/
+/*list names*/
 
-const listedComments = document.createElement('div');
-listedComments.classList.add('comments__listed-comments');
+const listedCommentsNameHeader = document.createElement('p');
+listedCommentsNameHeader.classList.add('comments__listed-subheader');
+listedCommentsNameHeader.classList.add('body-copy');
+listedCommentsNameHeader.innerText = commentsData.name; 
 
-listedCommentsSection.appendChild(listedComments);
+listedCommentsSection.appendChild(listedCommentsNameHeader);
 
 /*listed comments avatar*/
 
 const listedCommentsAvatar = document.createElement('img');
-listedCommentsAvatar.classList.add('comments__listed-avatar');
+listedCommentsAvatar.classList.add('comments__avatar-placeholder');
 
-listedComments.appendChild(listedCommentsAvatar);
 
-/*listed comments name*/
+listedCommentsSection.appendChild(listedCommentsAvatar);
 
-const listedCommentsNameHeader = document.createElement('label');
-listedCommentsNameHeader.classList.add('comments__listed-subheader');
-listedCommentsNameHeader.innerText = 'NAME'; /*put in a let function*/
 
-listedComments.appendChild(listedCommentsNameHeader);
+/*listed date*/
+
+const listedCommentsDate = document.createElement('p');
+listedCommentsDate.classList.add('comments__listed-date');
+listedCommentsDate.classList.add('body-copy');
+listedCommentsDate.innerText = commentsData.date;
+
+listedCommentsSection.appendChild(listedCommentsDate);
+
 
 /*listed comments text area*/
 
-const listedCommentsTextArea = document.createElement('textarea');
+const listedCommentsTextArea = document.createElement('blockquote');
 listedCommentsTextArea.classList.add('comments__listed-text-area');
+listedCommentsTextArea.classList.add('body-copy');
+listedCommentsTextArea.innerText = commentsData.comment;
 
-listedComments.appendChild(listedCommentsTextArea);
+listedCommentsSection.appendChild(listedCommentsTextArea);
+
+const listedDivider = document.createElement('hr');
+listedDivider.classList.add('comments__divider');
+
+listedCommentsSection.appendChild(listedDivider);
+
+return listedCommentsSection
+
+}
+
+const generateCommentsList = (comments) => {
+    for (let i = 0; i < comments.length; i++){
+        const commentsData = comments[i];
+        console.log('Comments Data: ', commentsData);
+
+        const commentsSections = generateListedComments(commentsData);
+        console.log('Comments Sections: ', commentsSections);
+
+        listedCommentsBlock.appendChild(commentsSections);
+    }
+}
+
+
+generateCommentsList(comments);
 
 
 

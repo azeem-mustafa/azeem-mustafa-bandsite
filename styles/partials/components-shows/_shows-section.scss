@@ -1,6 +1,6 @@
 @use '../variable' as *;
 @use '../mixins/mixins-paddings' as *;
-
+@use '../mixins/mixin' as *;
 
 
 .shows{
@@ -15,6 +15,7 @@
 
     &__header{
         color: $mercury;
+        font-weight: 500;
     }
 
     &__date{
@@ -26,18 +27,9 @@
     }
 
     &__button{
-       border-radius: 0.3rem;
-       height: 2.5rem;
-       color: $white;
-       background-color: $black;
-       
-       &:hover{
-           background-color: $darkBlack;
-       }
+       @include button;
     }
-
     &__divider{
-        border-top: 0.063rem solid $mercury;
-        width: 100%;
+       @include divider;
     }
 }
