@@ -60,28 +60,25 @@ header{
                 width: 50%;
                 display: flex;
                 align-items: center;
+
+                &--selected{
+                    border-bottom: $white 0.625rem solid;
                 }
+                
+                &:hover{
+                    border-bottom: $alabaster 0.625rem solid;
+                    color: $white;
+                    font-weight: 600;
+                    }
+            }
 
             &__link{
                 flex-grow: 2;  
                 color: $mercury;  
                 text-align: center;
 
-                &--selected{
-                    text-decoration: underline;
-                    text-underline-offset: 50%;
-                    color: $white;
-        
-                }
-
                 @include tablet{
                     @include tablet-padding-nav;
-                    }
-
-                &:hover{
-                    border-bottom: $alabaster 0.625rem solid;
-                    color: $white;
-                    font-weight: 600;
                     }
                 }
                 

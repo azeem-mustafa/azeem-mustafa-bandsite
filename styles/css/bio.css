@@ -169,12 +169,6 @@
   border-top: 0.063rem solid #E1E1E1;
   width: 100%;
 }
-.comments__avatar-placeholder {
-  border-radius: 50%;
-  height: 2.25rem;
-  width: 2.25rem;
-  background-color: #E1E1E1;
-}
 .comments__form-flex {
   display: flex;
   border: green 3px solid;
@@ -246,10 +240,41 @@
   border: #323232;
 }
 .comments .validation {
-  background-color: red;
+  border: 0.063rem #d22d2d solid;
 }
 .comments__listed-block {
-  border: red 2px solid;
+  border: red 5px solid;
+}
+.comments__listed-comments-flexbox {
+  padding: 0rem 1rem;
+  position: relative;
+}
+.comments__listed-img-flexbox {
+  padding-top: 1rem;
+}
+.comments__listed-date {
+  display: inline-flex;
+  height: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  color: #E1E1E1;
+  font-weight: 500;
+}
+.comments__avatar-placeholder {
+  border-radius: 50%;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #E1E1E1;
+}
+.comments__listed-subheader {
+  display: inline-flex;
+  height: 1rem;
+  font-weight: 600;
+}
+.comments__listed-text-area {
+  margin: 0;
+  font-weight: 600;
 }
 .comments__listed-comments-section {
   display: flex;

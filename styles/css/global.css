@@ -92,25 +92,23 @@ header .nav-bar__item {
   display: flex;
   align-items: center;
 }
+header .nav-bar__item--selected {
+  border-bottom: #ffffff 0.625rem solid;
+}
+header .nav-bar__item:hover {
+  border-bottom: #FAFAFA 0.625rem solid;
+  color: #ffffff;
+  font-weight: 600;
+}
 header .nav-bar__link {
   flex-grow: 2;
   color: #E1E1E1;
   text-align: center;
 }
-header .nav-bar__link--selected {
-  text-decoration: underline;
-  text-underline-offset: 50%;
-  color: #ffffff;
-}
 @media (min-width: 48rem) {
   header .nav-bar__link {
     padding: 3rem 2.25em 2.25rem 2.25rem;
   }
-}
-header .nav-bar__link:hover {
-  border-bottom: #FAFAFA 0.625rem solid;
-  color: #ffffff;
-  font-weight: 600;
 }
 
 .footer {
@@ -168,6 +166,7 @@ header .nav-bar__link:hover {
   align-self: center;
   flex-grow: 2;
   text-align: right;
+  display: none;
 }
 @media (min-width: 48rem) {
   .footer__information {
@@ -213,15 +212,11 @@ header .nav-bar__link:hover {
     margin-top: 1rem;
   }
 }
-.footer__copyright__logo-text-two {
-  max-height: 1.25rem;
-  max-width: 7.5rem;
-  padding-bottom: 1rem;
-}
-@media (min-width: 48rem) {
-  .footer__copyright__logo-text-two {
-    display: none;
-  }
+.footer__logo-text-two {
+  align-self: center;
+  flex-grow: 2;
+  text-align: right;
+  padding-top: 3rem;
 }
 
 /*setting all content to fit inside respective boxes*/

@@ -61,6 +61,7 @@
         align-self: center;
         flex-grow: 2;
         text-align: right;
+        display: none;
     }
     
     //address and contact info 
@@ -126,15 +127,11 @@
                 margin-top: 1rem;
             }
         }
-
+    } 
     &__logo-text-two{
-        max-height: 1.25rem;
-        max-width: 7.5rem;
-        padding-bottom: 1rem;
-
-        @include tablet{
-            display: none;
-            }
-        }
-    }      
+        align-self: center;
+        flex-grow: 2;
+        text-align: right;
+        padding-top: 3rem;
+    }     
 }

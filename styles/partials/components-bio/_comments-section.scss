@@ -25,13 +25,6 @@
         @include divider;
     }
 
-    &__avatar-placeholder{
-        border-radius: 50%;
-        height: 2.25rem;
-        width: 2.25rem;
-        background-color: $mercury;
-    }
-
     /*this first section is for the user inputting comments*/
     /*flex box for user input comments*/
     &__form-flex{
@@ -75,18 +68,52 @@
     }
     
     .validation{
-        background-color: red;
+        border: 0.063rem #d22d2d solid;
     }
 
     /*this second section is form the comments that are listed after inputting*/
 
     &__listed-block{
-        border: red 2px solid;
+        border: red 5px solid;
     }
 
+    &__listed-comments-flexbox{
+        @include mobile-padding-sides;
+        position: relative;
+    }
+
+    &__listed-img-flexbox{
+        padding-top: 1rem;
+    }
+
+    &__listed-date{
+        display: inline-flex;
+        height: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        color: $mercury;
+        font-weight: 500;
+    }
+
+    &__avatar-placeholder{
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: $mercury;
+    }
+
+    &__listed-subheader{
+        display: inline-flex;
+        height: 1rem;
+        font-weight: 600;
+    }
+    &__listed-text-area{
+        margin: 0;
+        font-weight: 600;
+    }
     &__listed-comments-section{
         display: flex;
-        
         border: blue 2px solid;
     }
 

@@ -22,8 +22,16 @@ let comments = [
 
 const commentBlock = document.querySelector('.comments__block');
 
-const form = document.querySelector('.comments__form');
+/*divider*/
 
+const divider = document.createElement('hr');
+divider.classList.add('comments__divider');
+
+commentBlock.appendChild(divider);
+
+/*form event*/
+
+const form = document.querySelector('.comments__form');
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -35,14 +43,12 @@ form.addEventListener('submit', function(event){
 
     if (userName === ""){
         const valMessage = document.querySelector('.comments__name');
-        valMessage.value = 'Please input valid text'
         valMessage.classList.add('validation');
 
         return false
     }
     if (userComment === ''){
         const valMessage = document.querySelector('.comments__text-area');
-        valMessage.value = "Please input valid text"
         valMessage.classList.add('validation');
 
         return false
@@ -72,16 +78,6 @@ form.addEventListener('submit', function(event){
     
 });
 
-
-
-// /*divider*/
-
-const divider = document.createElement('hr');
-divider.classList.add('comments__divider');
-
-commentBlock.appendChild(divider);
-
-
 /*already written comments*/
 
 
@@ -100,6 +96,28 @@ listedCommentsSection.classList.add('comments__listed-comments-section');
 
 listedCommentsBlock.appendChild(listedCommentsSection);
 
+/*listed comments avatar flex box*/
+
+const listedImgFlexBox = document.createElement('div');
+listedImgFlexBox.classList.add('comments__listed-img-flexbox');
+
+listedCommentsSection.appendChild(listedImgFlexBox);
+
+/*listed comments avatar*/
+
+const listedCommentsAvatar = document.createElement('img');
+listedCommentsAvatar.classList.add('comments__avatar-placeholder');
+
+listedImgFlexBox.appendChild(listedCommentsAvatar);
+
+/*listed comments flex box*/
+
+const listedCommentsFlexBox = document.createElement('div');
+listedCommentsFlexBox.classList.add('comments__listed-comments-flexbox');
+
+listedCommentsSection.appendChild(listedCommentsFlexBox);
+
+
 /*list names*/
 
 const listedCommentsNameHeader = document.createElement('p');
@@ -107,16 +125,7 @@ listedCommentsNameHeader.classList.add('comments__listed-subheader');
 listedCommentsNameHeader.classList.add('body-copy');
 listedCommentsNameHeader.innerText = commentsData.name; 
 
-listedCommentsSection.appendChild(listedCommentsNameHeader);
-
-/*listed comments avatar*/
-
-const listedCommentsAvatar = document.createElement('img');
-listedCommentsAvatar.classList.add('comments__avatar-placeholder');
-
-
-listedCommentsSection.appendChild(listedCommentsAvatar);
-
+listedCommentsFlexBox.appendChild(listedCommentsNameHeader);
 
 /*listed date*/
 
@@ -125,7 +134,7 @@ listedCommentsDate.classList.add('comments__listed-date');
 listedCommentsDate.classList.add('body-copy');
 listedCommentsDate.innerText = commentsData.date;
 
-listedCommentsSection.appendChild(listedCommentsDate);
+listedCommentsFlexBox.appendChild(listedCommentsDate);
 
 
 /*listed comments text area*/
@@ -135,12 +144,12 @@ listedCommentsTextArea.classList.add('comments__listed-text-area');
 listedCommentsTextArea.classList.add('body-copy');
 listedCommentsTextArea.innerText = commentsData.comment;
 
-listedCommentsSection.appendChild(listedCommentsTextArea);
+listedCommentsFlexBox.appendChild(listedCommentsTextArea);
 
 const listedDivider = document.createElement('hr');
 listedDivider.classList.add('comments__divider');
 
-listedCommentsSection.appendChild(listedDivider);
+commentBlock.appendChild(listedDivider);
 
 return listedCommentsSection
 
