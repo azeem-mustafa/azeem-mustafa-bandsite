@@ -20,12 +20,19 @@
     }
 }
 
+/*forms*/
 
 @mixin form-field{
     min-height: 2.25rem;
     border-radius: 0.25rem;
     padding: 0.75rem;
+    background-color: $white;
     border: 0.063rem $mercury solid;
+
+    &::placeholder{
+        color: $black;
+        font-weight: 600;
+    }
 
     &:active{
         border: $black;

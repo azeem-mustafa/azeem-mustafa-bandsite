@@ -20,16 +20,11 @@
     display: flex;
     }
 
-    
-
     &__page-title{
         display: flex;
         position: absolute;
         color: $white;
-
-        /*padding for text in hero img*/
-        
-        
+        @include mobile-padding-sides;
 
         @include tablet{
             @include tablet-padding-sides;

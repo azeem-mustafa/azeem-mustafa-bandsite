@@ -22,17 +22,59 @@ let comments = [
 
 const commentBlock = document.querySelector('.comments__block');
 
-
-
 const form = document.querySelector('.comments__form');
+
+
 form.addEventListener('submit', function(event){
     event.preventDefault();
+   
+    const userName = event.target.user_name.value;
+    const userComment = event.target.user_comment.value;
 
-    console.log(event.target.form);
+    /*validation*/
+
+    if (userName === ""){
+        const valMessage = document.querySelector('.comments__name');
+        valMessage.value = 'Please input valid text'
+        valMessage.classList.add('validation');
+
+        return false
+    }
+    if (userComment === ''){
+        const valMessage = document.querySelector('.comments__text-area');
+        valMessage.value = "Please input valid text"
+        valMessage.classList.add('validation');
+
+        return false
+    };
+
+
+    /*format date*/
+
+    let currentDate = new Date(Date.now());
+    let formattedDate =currentDate.getMonth() + "/" + currentDate.getDate() + "/" + currentDate.getFullYear();
+
+    /*new comment submition*/
+
+    const newComment = {
+        img: '../assets/Images/Mohan-muruge.jpg',
+        name: userName,
+        date: formattedDate,
+        comment: userComment
+    };
+
+    comments.unshift(newComment);
+
+    const emptyCommentsBlock = document.querySelector('.comments__listed-block');
+    emptyCommentsBlock.innerHTML = "";
+
+    generateCommentsList(comments);
+    
 });
 
 
-/*divider*/
+
+// /*divider*/
 
 const divider = document.createElement('hr');
 divider.classList.add('comments__divider');
@@ -105,15 +147,15 @@ return listedCommentsSection
 }
 
 const generateCommentsList = (comments) => {
-    for (let i = 0; i < comments.length; i++){
-        const commentsData = comments[i];
+    comments.forEach(comment => { 
+        const commentsData = comment;
         console.log('Comments Data: ', commentsData);
 
         const commentsSections = generateListedComments(commentsData);
         console.log('Comments Sections: ', commentsSections);
 
         listedCommentsBlock.appendChild(commentsSections);
-    }
+    })
 }
 
 

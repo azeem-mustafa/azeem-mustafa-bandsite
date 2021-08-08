@@ -13,16 +13,36 @@
     &__block{
         display: flex;
         flex-direction: column;
+        border: yellow 3px solid;
     }
 
+    /*these are general stylings throughout section*/
+    &__button{
+        @include button;
+     }
+
+    &__divider{
+        @include divider;
+    }
+
+    &__avatar-placeholder{
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: $mercury;
+    }
+
+    /*this first section is for the user inputting comments*/
+    /*flex box for user input comments*/
     &__form-flex{
         display: flex;
+        border: green 3px solid;
     }
 
     /*written text area*/
     &__form-img-box{
         display: flex;
-        
+        padding-top: 2.25rem;
     }
 
     &__form-avatar{
@@ -32,7 +52,6 @@
     }
 
     /*comment section*/
-
     &__comment-box{
         display: flex;
         flex-direction: column;
@@ -40,35 +59,35 @@
         @include mobile-padding-sides;
     }
     &__form-label{
-        color: $black; /*change this*/
         padding-bottom: 0.25rem;
-    }
-
-    &__avatar-placeholder{
-        border-radius: 50%;
-        height: 2.25rem;
-        width: 2.25rem;
-        background-color: $mercury;
-    }
-    &__form-label{
-        color: green;
+        font-weight: 600;
+        color: $mercury;
+        padding-top: 1rem;
     }
 
     &__name{
         @include form-field;
-        background-color: $mercury
     }
 
     &__text-area{
         @include form-field;
-        background-color: $mercury;
+        height: 10rem;
+    }
+    
+    .validation{
+        background-color: red;
     }
 
-    &__button{
-        @include button;
-     }
+    /*this second section is form the comments that are listed after inputting*/
 
-    &__divider{
-        @include divider;
+    &__listed-block{
+        border: red 2px solid;
     }
+
+    &__listed-comments-section{
+        display: flex;
+        
+        border: blue 2px solid;
+    }
+
 }
