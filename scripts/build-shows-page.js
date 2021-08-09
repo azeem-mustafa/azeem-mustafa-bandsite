@@ -53,57 +53,79 @@ showListSection.appendChild(showListBlock);
 
 /*create dates section*/
 
+const datesBlock = document.createElement('div');
+datesBlock.classList.add('shows__dates-block');
+
+showListBlock.appendChild(datesBlock);
+
 const datesHeader = document.createElement('span');
 datesHeader.classList.add('shows__header');
 datesHeader.classList.add('body-copy');
 datesHeader.innerText = 'DATES';
 
-showListBlock.appendChild(datesHeader);
+datesBlock.appendChild(datesHeader);
 
 const datesData = document.createElement('p');
 datesData.classList.add('shows__date');
 datesData.classList.add('body-copy')
 datesData.innerText = showData.date;
 
-showListBlock.appendChild(datesData);
+datesBlock.appendChild(datesData);
 
 /*creates venue section*/
+
+const venueBlock = document.createElement('div');
+venueBlock.classList.add('shows__venue-block');
+
+showListBlock.appendChild(venueBlock);
 
 const venueHeader = document.createElement('span');
 venueHeader.classList.add('shows__header');
 venueHeader.classList.add('body-copy');
 venueHeader.innerText = 'VENUE';
 
-showListBlock.appendChild(venueHeader);
+venueBlock.appendChild(venueHeader);
 
 const venueData = document.createElement('p');
 venueData.classList.add('shows__data');
 venueData.classList.add('body-copy');
 venueData.innerText = showData.venue;
 
-showListBlock.appendChild(venueData);
+venueBlock.appendChild(venueData);
 
 /*create location section*/
+
+const locationBlock = document.createElement('div');
+locationBlock.classList.add('shows__location-block');
+
+showListBlock.appendChild(locationBlock);
 
 const locationHeader = document.createElement('span');
 locationHeader.classList.add('shows__header');
 locationHeader.classList.add('body-copy');
 locationHeader.innerText = 'LOCATION';
 
-showListBlock.appendChild(locationHeader);
+locationBlock.appendChild(locationHeader);
 
 const locationData = document.createElement('p');
 locationData.classList.add('shows__data');
 locationData.classList.add('body-copy');
 locationData.innerText = showData.location;
 
-showListBlock.appendChild(locationData);
+locationBlock.appendChild(locationData);
+
+/*button section*/
+
+const buttonBlock = document.createElement('div');
+buttonBlock.classList.add('shows__button-block');
+
+showListBlock.appendChild(buttonBlock);
 
 const buyBtn = document.createElement('button');
 buyBtn.classList.add('shows__button');
 buyBtn.innerText = 'BUY TICKETS';
 
-showListBlock.appendChild(buyBtn);
+buttonBlock.appendChild(buyBtn);
 
 const divider = document.createElement('hr');
 divider.classList.add('shows__divider');
