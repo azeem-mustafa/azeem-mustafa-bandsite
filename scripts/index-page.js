@@ -38,14 +38,14 @@ form.addEventListener('submit', function(event){
     /*validation*/
 
     if (userName === ""){
-        const valMessage = document.querySelector('.comments__name');
-        valMessage.classList.add('validation');
+        const nameValidation = document.querySelector('.comments__name');
+        nameValidation.classList.add('comments__validation');
 
         return false
     }
     if (userComment === ''){
-        const valMessage = document.querySelector('.comments__text-area');
-        valMessage.classList.add('validation');
+        const commentsValidation = document.querySelector('.comments__text-area');
+        commentsValidation.classList.add('comments__validation');
 
         return false
     };

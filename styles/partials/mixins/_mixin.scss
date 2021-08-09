@@ -42,13 +42,20 @@
     height: 2.5rem;
     color: $white;
     background-color: $black;
-    margin: 1rem 0rem;
+    border-width: 0;
     width: 100%;
     
     &:hover{
         background-color: $darkBlack;
     }
- }
+
+    @include tablet{
+        min-width: 9.375rem;
+        max-width: 9.375rem;
+        padding: 0rem 1.938rem;
+        
+    }
+}
 
 /*dividers*/
 

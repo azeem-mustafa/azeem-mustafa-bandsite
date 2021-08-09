@@ -1,5 +1,5 @@
 
-let shows = [
+const shows = [
     {
         date: 'Mon Sept 06 2021',
         venue: 'Ronald Lane',
@@ -35,7 +35,11 @@ let shows = [
 
 
 
+
+
 const showsList = document.querySelector('.shows__list');
+
+
 
 const generateShowsContent = (showData) => {
 /*created section for shows*/
@@ -60,7 +64,7 @@ showListBlock.appendChild(datesBlock);
 
 const datesHeader = document.createElement('span');
 datesHeader.classList.add('shows__header');
-datesHeader.classList.add('body-copy');
+datesHeader.classList.add('labels-and-buttons');
 datesHeader.innerText = 'DATES';
 
 datesBlock.appendChild(datesHeader);
@@ -81,7 +85,7 @@ showListBlock.appendChild(venueBlock);
 
 const venueHeader = document.createElement('span');
 venueHeader.classList.add('shows__header');
-venueHeader.classList.add('body-copy');
+venueHeader.classList.add('labels-and-buttons');
 venueHeader.innerText = 'VENUE';
 
 venueBlock.appendChild(venueHeader);
@@ -102,7 +106,7 @@ showListBlock.appendChild(locationBlock);
 
 const locationHeader = document.createElement('span');
 locationHeader.classList.add('shows__header');
-locationHeader.classList.add('body-copy');
+locationHeader.classList.add('labels-and-buttons');
 locationHeader.innerText = 'LOCATION';
 
 locationBlock.appendChild(locationHeader);
@@ -123,24 +127,28 @@ showListBlock.appendChild(buttonBlock);
 
 const buyBtn = document.createElement('button');
 buyBtn.classList.add('shows__button');
+buyBtn.classList.add('labels-and-buttons');
 buyBtn.innerText = 'BUY TICKETS';
+
+buttonBlock.appendChild(buyBtn);
+
+/*button event listener*/
 
 buyBtn.addEventListener('click', () =>{
     console.log(showData.venue)
 });
 
-buttonBlock.appendChild(buyBtn);
+/*line divider*/
 
 const divider = document.createElement('hr');
 divider.classList.add('shows__divider');
 
 showListSection.appendChild(divider);
 
-return showListSection
 
+return showListSection
 }
 
-const buyBtn = document.querySelectorAll('.shows__button')
 
 const generateShowsList = (shows) => {
     for (let i = 0; i < shows.length; i++){
@@ -152,12 +160,6 @@ const generateShowsList = (shows) => {
 
         showsList.appendChild(showSections);
     }
-
 };
 
 generateShowsList(shows);
-
-
-
- 
-

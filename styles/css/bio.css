@@ -180,11 +180,18 @@
   height: 2.5rem;
   color: #ffffff;
   background-color: #323232;
-  margin: 1rem 0rem;
+  border-width: 0;
   width: 100%;
 }
 .comments__button:hover {
   background-color: #000000;
+}
+@media (min-width: 48rem) {
+  .comments__button {
+    min-width: 9.375rem;
+    max-width: 9.375rem;
+    padding: 0rem 1.938rem;
+  }
 }
 @media (min-width: 48rem) {
   .comments__button {
@@ -275,7 +282,7 @@
 .comments__text-area:active {
   border: #323232;
 }
-.comments .validation {
+.comments__validation {
   border: 0.063rem #d22d2d solid;
 }
 .comments__listed-block {
@@ -342,8 +349,6 @@
   font-display: swap;
 }
 /*mobile text formatting*/
-/*tablet and desktop fonts*/
-/*typography styles*/
 /*typography styles*/
 .page-header {
   font-family: "AvenirNext LT Pro";
@@ -365,7 +370,6 @@
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
-  padding: 1.5rem 0rem 1rem 0rem;
 }
 @media (min-width: 48rem) {
   .section-header {
@@ -373,7 +377,6 @@
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    padding: 3rem 0em 2.25rem 0rem;
   }
 }
 
@@ -422,21 +425,18 @@
   }
 }
 
-/*specific typography I believe needed tweaking, including the logo at the top and bottom of the page and nav items*/
-.nav-bar__link {
+.labels-and-buttons {
   font-family: "AvenirNext LT Pro";
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
 }
 @media (min-width: 48rem) {
-  .nav-bar__link {
+  .labels-and-buttons {
     font-family: "AvenirNext LT Pro";
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 }
 

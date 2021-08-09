@@ -1,6 +1,7 @@
 @use '../variable' as *;
-@use '../mixins/mixins-paddings' as *;
 @use '../mixins/mixin' as *;
+@use '../mixins/mixins-paddings' as *;
+@use '../typography' as *;
 
 
 .shows{
@@ -25,104 +26,53 @@
     }
 
     &__list{
-        width: 100%;
 
         @include desktop{
             @include tablet-padding-headlines;
+            width: 100%;
         }
-    }
-    
-    &__section{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
     }
 
     &__block{
-        display: flex;
-        flex-direction: column;
 
         @include tablet{
+        display: flex;
         flex-direction: row;
+        align-items: center;
         border: yellow 3px solid;
         justify-content: space-between;
-        flex-grow: 2;
-        width: 100%;
-        }
-
-        @include desktop{
-            display: flex;
         }
     }
 
     &__dates-block{
         display: flex;
         flex-direction: column;
-        
-        @include tablet{
-            display: inline-flex;
-        border: pink 3px solid;
-        flex-direction: column;
-        }
-        
     }
 
-    &__venue-block{
-        display: flex;
-        flex-direction: column;
-
-        @include tablet{
-            display: inline-flex;
-            flex-direction: column;
-            border: pink 3px solid;
-        }
-    }
-
-    &__location-block{
-        display: flex;
-        flex-direction: column;
-    }
-
-    
     &__header{
         color: $mercury;
-        font-weight: 500;
-        display: inline-flex;
-        height: 2rem;
-        border: blue 3px solid;
+        display: flex;
     }
 
     &__date{
-        font-weight: 600;
         display: inline-flex;
-        height: 3rem;
+        font-weight: 600;
+        margin-top: 0;
         border: green 2px solid; 
     }
 
-    &__button-block{
-        @include tablet{
-            display: flex;
-            align-items: center;
-        }
+    &__data{
+        margin-top: 0;
     }
 
     &__button{
        @include button;
-
-       @include tablet{
-        min-width: 9.375rem;
-        max-width: 9.375rem;
-        padding: 0rem 1.938rem;
-        margin-left: auto;
-       
-       }
     }
-
 
     &__divider{
        @include divider;
     }
-    }
+}
 
     @include tablet{
         .shows__section:nth-child(n + 2) > .shows__block > .shows__dates-block > .shows__header{
@@ -139,5 +89,5 @@
 @include tablet{
     .shows__section:nth-child(n + 2) > .shows__block > .shows__location-block > .shows__header{
         display: none;
+        }
     }
-}
