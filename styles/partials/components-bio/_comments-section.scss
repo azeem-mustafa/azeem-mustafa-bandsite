@@ -63,6 +63,11 @@
     border-radius: 50%;
     max-height: 2.25rem;
     width: 2.25rem;
+
+    @include tablet{
+        max-height: 3rem;
+        width: 3rem;
+    }
     }
 
     /*comment section*/
@@ -94,12 +99,17 @@
 
     /*this second section is form the comments that are listed after inputting*/
     &__listed-block{
-        padding-bottom: 2rem
+        padding-bottom: 2rem;
+
+        &__listed-comments-section{
+            width: 100%
+        }
     }
 
     &__listed-comments-flexbox{
         @include mobile-padding-sides;
         position: relative;
+        width: 100%;
     }
 
     &__listed-img-flexbox{

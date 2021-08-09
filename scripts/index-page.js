@@ -1,4 +1,4 @@
-let comments = [
+const comments = [
     {
         img: '#',
         name: 'Connor Walton',
@@ -31,6 +31,7 @@ form.addEventListener('submit', function(event){
    
     const userName = event.target.user_name.value;
     const userComment = event.target.user_comment.value;
+    
 
     /*validation*/
 
@@ -50,8 +51,8 @@ form.addEventListener('submit', function(event){
 
     /*format date*/
 
-    let currentDate = new Date(Date.now());
-    let formattedDate =currentDate.getMonth() + "/" + currentDate.getDate() + "/" + currentDate.getFullYear();
+    const currentDate = new Date(Date.now());
+    const formattedDate =currentDate.getMonth() + "/" + currentDate.getDate() + "/" + currentDate.getFullYear();
 
     /*new comment submition*/
 
@@ -66,9 +67,12 @@ form.addEventListener('submit', function(event){
 
     const emptyCommentsBlock = document.querySelector('.comments__listed-block');
     emptyCommentsBlock.innerHTML = "";
-
-    generateCommentsList(comments);
     
+
+    
+
+    displaycomments(comments);
+   
 });
 
 /*already written comments*/
@@ -85,6 +89,7 @@ commentBlock.appendChild(listedCommentsBlock);
 const firstLineDivider = document.createElement('hr');
 firstLineDivider.classList.add('comments__divider');
 listedCommentsBlock.appendChild(firstLineDivider);
+
 
 
 const generateListedComments = (commentsData) => {
@@ -147,14 +152,13 @@ listedCommentsFlexBox.appendChild(listedCommentsTextArea);
 
 
 
-
-
 return listedCommentsSection
 
 
 }
 
-const generateCommentsList = (comments) => {
+
+const displaycomments = (comments) => {
     comments.forEach(comment => { 
         const commentsData = comment;
         console.log('Comments Data: ', commentsData);
@@ -174,7 +178,8 @@ const generateCommentsList = (comments) => {
 }
 
 
-generateCommentsList(comments);
+displaycomments(comments);
+
 
 
 

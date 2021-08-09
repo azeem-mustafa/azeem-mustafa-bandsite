@@ -208,6 +208,12 @@
   max-height: 2.25rem;
   width: 2.25rem;
 }
+@media (min-width: 48rem) {
+  .comments__form-avatar {
+    max-height: 3rem;
+    width: 3rem;
+  }
+}
 .comments__comment-box {
   display: flex;
   flex-direction: column;
@@ -273,9 +279,13 @@
 .comments__listed-block {
   padding-bottom: 2rem;
 }
+.comments__listed-block__listed-comments-section {
+  width: 100%;
+}
 .comments__listed-comments-flexbox {
   padding: 0rem 1rem;
   position: relative;
+  width: 100%;
 }
 .comments__listed-img-flexbox {
   padding-top: 1rem;

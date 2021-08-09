@@ -5,8 +5,8 @@
 .hero-img{
     
     background-color: $black;
-    z-index: 1;
     position: relative;
+ 
 
     &__background{
         background-image: url(../../../assets/Images/hero-shows.jpg);
@@ -15,17 +15,28 @@
         @include mobile-padding-sides;
         width: 100%;
         opacity: 0.5;
-        border: olive 4px solid;
-        z-index: 1;
         position: relative;
+        z-index: 3;
+        border: olive 4px solid;
+       
+
+        @include tablet{
+            @include tablet-padding-sides;
+
+            @include desktop{
+                @include desktop-padding-sides;
+            }
+        }
     }  
 
     &__small-title{
         color: $white;
+        position: relative;
+        z-index: 4;
     
     }
 
     &__page-title{
-        color: white;
+        color: $white;
     }
 }

@@ -125,6 +125,10 @@ const buyBtn = document.createElement('button');
 buyBtn.classList.add('shows__button');
 buyBtn.innerText = 'BUY TICKETS';
 
+buyBtn.addEventListener('click', () =>{
+    console.log(showData.venue)
+});
+
 buttonBlock.appendChild(buyBtn);
 
 const divider = document.createElement('hr');
@@ -136,6 +140,8 @@ return showListSection
 
 }
 
+const buyBtn = document.querySelectorAll('.shows__button')
+
 const generateShowsList = (shows) => {
     for (let i = 0; i < shows.length; i++){
         const showData = shows[i];
@@ -145,14 +151,12 @@ const generateShowsList = (shows) => {
         console.log('Shows Sections: ', showSections);
 
         showsList.appendChild(showSections);
-
-        
-        
     }
 
-}
+};
 
 generateShowsList(shows);
+
 
 
  
