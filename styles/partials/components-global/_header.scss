@@ -11,10 +11,11 @@ header{
         justify-content: center;
         display: flex;
         
+        }
+        
         @include tablet{
             width: 100%;
             }
-        }
 
         .header__logo{
             @include mobile-headline-padding;
@@ -69,7 +70,7 @@ header{
                     border-bottom: $alabaster 0.625rem solid;
                     color: $white;
                     font-weight: 600;
-                    }
+                }
             }
 
             &__link{
@@ -79,9 +80,7 @@ header{
 
                 @include tablet{
                     @include tablet-padding-nav;
-                    }
                 }
-                
-                
+            }     
         }
 }

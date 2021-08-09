@@ -6,6 +6,8 @@
 /*desktop padding*/
 /*screen breakpoints*/
 /*forms*/
+/*buttons*/
+/*dividers*/
 /*margin reset*/
 .hero-img {
   display: flex;
@@ -421,23 +423,6 @@
 }
 
 /*specific typography I believe needed tweaking, including the logo at the top and bottom of the page and nav items*/
-.header__logo {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
-}
-@media (min-width: 48rem) {
-  .header__logo {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 400;
-  }
-}
-
 .nav-bar__link {
   font-family: "AvenirNext LT Pro";
   font-weight: 700;
@@ -455,24 +440,6 @@
   }
 }
 
-.footer__logo {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
-}
-@media (min-width: 48rem) {
-  .footer__logo {
-    display: none;
-  }
-}
-@media (min-width: 48rem) and (min-width: 80rem) {
-  .footer__logo {
-    display: none;
-  }
-}
-
 header {
   background-color: #323232;
 }
@@ -482,7 +449,7 @@ header .header__wrapper {
   display: flex;
 }
 @media (min-width: 48rem) {
-  header .header__wrapper {
+  header {
     width: 100%;
   }
 }

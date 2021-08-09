@@ -68,16 +68,13 @@ form.addEventListener('submit', function(event){
     comments.unshift(newComment);
 
     const emptyCommentsBlock = document.querySelector('.comments__listed-block');
-   
-
+    emptyCommentsBlock.innerHTML = "";
     
     
-    form.remove(emptyCommentsBlock);
 
     
 
     displaycomments(comments);
-   
    
 });
 
