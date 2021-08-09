@@ -5,20 +5,42 @@
 
 .comments{
     @include mobile-padding-sides;
-    border: black 3px solid;
     display: flex;
     flex-direction: column;
     background-color: $alabaster;
 
+    @include tablet{
+        @include tablet-padding-sides;
+
+        @include desktop{
+            @include desktop-padding-sides;
+        }
+    }
+
     &__block{
         display: flex;
         flex-direction: column;
-        border: yellow 3px solid;
+        
+        @include tablet{
+            @include tablet-padding-sides;
+        }
+
+        @include desktop{
+            @include desktop-padding-sides;
+        }
     }
 
     /*these are general stylings throughout section*/
     &__button{
         @include button;
+
+        @include tablet{
+            min-width: 9.375rem;
+            max-width: 9.375rem;
+            padding: 0rem 1.938rem;
+            margin-left: auto
+            
+        }
      }
 
     &__divider{
@@ -29,7 +51,6 @@
     /*flex box for user input comments*/
     &__form-flex{
         display: flex;
-        border: green 3px solid;
     }
 
     /*written text area*/
@@ -72,9 +93,8 @@
     }
 
     /*this second section is form the comments that are listed after inputting*/
-
     &__listed-block{
-        border: red 5px solid;
+        padding-bottom: 2rem
     }
 
     &__listed-comments-flexbox{
@@ -110,11 +130,10 @@
     }
     &__listed-text-area{
         margin: 0;
-        font-weight: 600;
+        font-weight: 400;
     }
     &__listed-comments-section{
         display: flex;
-        border: blue 2px solid;
     }
 
 }

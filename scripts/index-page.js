@@ -22,13 +22,6 @@ let comments = [
 
 const commentBlock = document.querySelector('.comments__block');
 
-/*divider*/
-
-const divider = document.createElement('hr');
-divider.classList.add('comments__divider');
-
-commentBlock.appendChild(divider);
-
 /*form event*/
 
 const form = document.querySelector('.comments__form');
@@ -85,8 +78,13 @@ form.addEventListener('submit', function(event){
 
 const listedCommentsBlock = document.createElement('div');
 listedCommentsBlock.classList.add('comments__listed-block');
-
 commentBlock.appendChild(listedCommentsBlock);
+
+/*first line divider*/
+
+const firstLineDivider = document.createElement('hr');
+firstLineDivider.classList.add('comments__divider');
+listedCommentsBlock.appendChild(firstLineDivider);
 
 
 const generateListedComments = (commentsData) => {
@@ -146,12 +144,13 @@ listedCommentsTextArea.innerText = commentsData.comment;
 
 listedCommentsFlexBox.appendChild(listedCommentsTextArea);
 
-const listedDivider = document.createElement('hr');
-listedDivider.classList.add('comments__divider');
 
-commentBlock.appendChild(listedDivider);
+
+
+
 
 return listedCommentsSection
+
 
 }
 
@@ -164,6 +163,13 @@ const generateCommentsList = (comments) => {
         console.log('Comments Sections: ', commentsSections);
 
         listedCommentsBlock.appendChild(commentsSections);
+
+        /*line divider*/
+
+        const listedDivider = document.createElement('hr');
+        listedDivider.classList.add('comments__divider');
+
+        listedCommentsBlock.appendChild(listedDivider);
     })
 }
 

@@ -94,15 +94,6 @@ ul{
   }
 
 
-.footer__logo-nonMobile{
-    display: none;
-
-    @include tablet{
-        display: contents;
-        @include section-header;
-        font-weight: 400;
-    }
-}
 
 .footer__logo{
     @include mobiletext--section-header;

@@ -56,13 +56,16 @@
             }
         }
 
-    &__logo-text-non-mobile{
-
-        align-self: center;
-        flex-grow: 2;
-        text-align: right;
+    &__logo-text-one{
         display: none;
-    }
+
+        @include tablet{
+        display: flex;
+        flex-grow: 2;
+        align-items: center;
+        justify-content: flex-end;
+        }
+}
     
     //address and contact info 
 
@@ -133,5 +136,11 @@
         flex-grow: 2;
         text-align: right;
         padding-top: 3rem;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+
+        @include tablet{
+            display: none;
+        }
     }     
 }

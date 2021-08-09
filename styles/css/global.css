@@ -1,6 +1,9 @@
 /**screen breakpoints*/
 /*primary colors*/
 /*secondary colors*/
+/*mobile padding layout*/
+/*tablet padding layout*/
+/*desktop padding*/
 /*screen breakpoints*/
 /*forms*/
 /*margin reset*/
@@ -27,9 +30,6 @@
 }
 /*mobile text formatting*/
 /*tablet and desktop fonts*/
-/*mobile padding layout*/
-/*tablet padding layout*/
-/*desktop padding*/
 header {
   background-color: #323232;
 }
@@ -162,11 +162,16 @@ header .nav-bar__link {
 .footer__social-links-images img {
   height: 2rem;
 }
-.footer__logo-text-non-mobile {
-  align-self: center;
-  flex-grow: 2;
-  text-align: right;
+.footer__logo-text-one {
   display: none;
+}
+@media (min-width: 48rem) {
+  .footer__logo-text-one {
+    display: flex;
+    flex-grow: 2;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 @media (min-width: 48rem) {
   .footer__information {
@@ -217,6 +222,13 @@ header .nav-bar__link {
   flex-grow: 2;
   text-align: right;
   padding-top: 3rem;
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+}
+@media (min-width: 48rem) {
+  .footer__logo-text-two {
+    display: none;
+  }
 }
 
 /*setting all content to fit inside respective boxes*/
@@ -343,20 +355,6 @@ ul {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 400;
-  }
-}
-
-.footer__logo-nonMobile {
-  display: none;
-}
-@media (min-width: 48rem) {
-  .footer__logo-nonMobile {
-    display: contents;
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
     font-weight: 400;
   }
 }

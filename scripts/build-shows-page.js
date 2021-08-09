@@ -44,6 +44,13 @@ showListSection.classList.add('shows__section');
 
 showsList.appendChild(showListSection);
 
+/*create a div for each show's information*/
+
+const showListBlock = document.createElement('div');
+showListBlock.classList.add('shows__block');
+
+showListSection.appendChild(showListBlock);
+
 /*create dates section*/
 
 const datesHeader = document.createElement('span');
@@ -51,14 +58,14 @@ datesHeader.classList.add('shows__header');
 datesHeader.classList.add('body-copy');
 datesHeader.innerText = 'DATES';
 
-showListSection.appendChild(datesHeader);
+showListBlock.appendChild(datesHeader);
 
 const datesData = document.createElement('p');
 datesData.classList.add('shows__date');
 datesData.classList.add('body-copy')
 datesData.innerText = showData.date;
 
-showListSection.appendChild(datesData);
+showListBlock.appendChild(datesData);
 
 /*creates venue section*/
 
@@ -67,14 +74,14 @@ venueHeader.classList.add('shows__header');
 venueHeader.classList.add('body-copy');
 venueHeader.innerText = 'VENUE';
 
-showListSection.appendChild(venueHeader);
+showListBlock.appendChild(venueHeader);
 
 const venueData = document.createElement('p');
 venueData.classList.add('shows__data');
 venueData.classList.add('body-copy');
 venueData.innerText = showData.venue;
 
-showListSection.appendChild(venueData);
+showListBlock.appendChild(venueData);
 
 /*create location section*/
 
@@ -83,20 +90,20 @@ locationHeader.classList.add('shows__header');
 locationHeader.classList.add('body-copy');
 locationHeader.innerText = 'LOCATION';
 
-showListSection.appendChild(locationHeader);
+showListBlock.appendChild(locationHeader);
 
 const locationData = document.createElement('p');
 locationData.classList.add('shows__data');
 locationData.classList.add('body-copy');
 locationData.innerText = showData.location;
 
-showListSection.appendChild(locationData);
+showListBlock.appendChild(locationData);
 
 const buyBtn = document.createElement('button');
 buyBtn.classList.add('shows__button');
 buyBtn.innerText = 'BUY TICKETS';
 
-showListSection.appendChild(buyBtn);
+showListBlock.appendChild(buyBtn);
 
 const divider = document.createElement('hr');
 divider.classList.add('shows__divider');
@@ -116,6 +123,9 @@ const generateShowsList = (shows) => {
         console.log('Shows Sections: ', showSections);
 
         showsList.appendChild(showSections);
+
+        
+        
     }
 
 }

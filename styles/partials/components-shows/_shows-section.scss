@@ -13,13 +13,28 @@
         padding: 1rem;
     }
 
+    &__block{
+
+        @include tablet{
+        display: flex;
+        border: yellow 3px solid;
+    }
+}
+
+    
     &__header{
         color: $mercury;
         font-weight: 500;
+        display: inline-flex;
+        height: 2rem;
+        border: blue 3px solid;
     }
 
     &__date{
         font-weight: 600;
+        display: inline-flex;
+        height: 3rem;
+        border: green 2px solid;
     }
 
     &__data{
@@ -28,6 +43,13 @@
 
     &__button{
        @include button;
+
+       @include tablet{
+        min-width: 9.375rem;
+        max-width: 9.375rem;
+        padding: 0rem 1.938rem;
+        margin-left: auto
+       }
     }
     &__divider{
        @include divider;
