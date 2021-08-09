@@ -1,4 +1,5 @@
 @use './mixins/mixin' as *;
+@use './mixins/mixins-paddings' as *;
 
 @font-face {
     font-family: 'AvenirNext LT Pro';
@@ -119,8 +120,92 @@
   line-height: 1.25rem;
 }
 
+/*typography styles*/
+
+/*typography styles*/
 
 
+.page-header{
+  @include mobiletext--page-header;
+ 
+
+  @include tablet{
+      @include page-header;
+  }
+}
+
+.section-header{
+  @include mobiletext--section-header;
+  @include mobile-headline-padding;
+ 
+
+  @include tablet{
+      @include section-header;
+      @include tablet-padding-headlines;
+  }
+}
+
+.subheader{
+  @include mobiletext--subheader;
+  
+  @include tablet{
+      @include subheader;
+  }
+  
+}
+
+.body-copy{
+  @include mobiletext--body;
+
+  @include tablet{
+      @include text-body;
+  }
+}
+
+.footer-text{
+  @include mobiletext--footer;
+
+  @include tablet{
+      @include text-footer;
+  }
+}
+
+/*specific typography I believe needed tweaking, including the logo at the top and bottom of the page and nav items*/
+
+.header__logo{
+  @include mobiletext--section-header;
+  font-weight: 400;
+
+  @include tablet{
+      @include section-header;
+      font-weight: 400;
+  }
+}
+
+.nav-bar__link{
+  @include mobiletext--section-header;
+  font-weight: 400;
+
+  @include tablet{
+      @include subheader;
+      font-weight: 400;
+  }
+}
+
+
+
+.footer__logo{
+  @include mobiletext--section-header;
+  font-weight: 400;
+
+  @include tablet{
+      display: none;
+
+      @include desktop{
+          display: none;
+      }
+  }
+}
 
   
   

@@ -23,7 +23,7 @@
 
     &__headline{
         color: $white;
-        @include mobile-general-padding-headlines;
+        @include mobile-headline-padding;
 
         @include tablet{
             width: 33%;

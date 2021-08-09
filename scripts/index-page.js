@@ -25,6 +25,8 @@ const commentBlock = document.querySelector('.comments__block');
 /*form event*/
 
 const form = document.querySelector('.comments__form');
+const userNameField = document.querySelector('.comments__name');
+const commentField = document.querySelector('.comments__text-area');
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -66,12 +68,16 @@ form.addEventListener('submit', function(event){
     comments.unshift(newComment);
 
     const emptyCommentsBlock = document.querySelector('.comments__listed-block');
-    emptyCommentsBlock.innerHTML = "";
+   
+
     
+    
+    form.remove(emptyCommentsBlock);
 
     
 
     displaycomments(comments);
+   
    
 });
 
