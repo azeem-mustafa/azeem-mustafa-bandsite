@@ -20,7 +20,24 @@ const comments = [
 ]
 
 
+/*created a few extra items here*/
+
 const commentBlock = document.querySelector('.comments__block');
+
+/*listed comments section*/
+
+const listedCommentsBlock = document.createElement('div');
+listedCommentsBlock.classList.add('comments__listed-block');
+commentBlock.appendChild(listedCommentsBlock);
+
+/*first line divider*/
+
+const firstLineDivider = document.createElement('hr');
+firstLineDivider.classList.add('comments__divider');
+listedCommentsBlock.appendChild(firstLineDivider);
+
+
+
 
 /*form event*/
 
@@ -28,12 +45,13 @@ const form = document.querySelector('.comments__form');
 const userNameField = document.querySelector('.comments__name');
 const commentField = document.querySelector('.comments__text-area');
 
+
+
 form.addEventListener('submit', function(event){
     event.preventDefault();
    
     const userName = event.target.user_name.value;
     const userComment = event.target.user_comment.value;
-    
 
     /*validation*/
 
@@ -43,6 +61,7 @@ form.addEventListener('submit', function(event){
 
         return false
     }
+
     if (userComment === ''){
         const commentsValidation = document.querySelector('.comments__text-area');
         commentsValidation.classList.add('comments__validation');
@@ -69,29 +88,11 @@ form.addEventListener('submit', function(event){
 
     const emptyCommentsBlock = document.querySelector('.comments__listed-block');
     emptyCommentsBlock.innerHTML = "";
+    event.target.reset();
     
-    
-
-    
-
     displaycomments(comments);
    
 });
-
-/*already written comments*/
-
-
-/*listed comments section*/
-
-const listedCommentsBlock = document.createElement('div');
-listedCommentsBlock.classList.add('comments__listed-block');
-commentBlock.appendChild(listedCommentsBlock);
-
-/*first line divider*/
-
-const firstLineDivider = document.createElement('hr');
-firstLineDivider.classList.add('comments__divider');
-listedCommentsBlock.appendChild(firstLineDivider);
 
 
 
@@ -152,12 +153,7 @@ listedCommentsTextArea.innerText = commentsData.comment;
 
 listedCommentsFlexBox.appendChild(listedCommentsTextArea);
 
-
-
-
 return listedCommentsSection
-
-
 }
 
 

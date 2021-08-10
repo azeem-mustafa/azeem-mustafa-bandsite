@@ -1,8 +1,7 @@
 /*mobile padding layout*/
 
-@mixin mobile-headline-padding{
-    
-    padding: 1.5rem 0rem 1rem 0rem;
+  @mixin mobile-padding-top-and-bottom {
+    padding: 1rem 0rem; 
   }
 
   @mixin mobile-padding-sides {

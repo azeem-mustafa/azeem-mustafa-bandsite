@@ -26,12 +26,12 @@
         @include tablet{
 
             @include tablet-padding-article-block;
-            }
+        }
 
             @include desktop{
                 @include desktop-article-block-padding;
-            }
         }
+    }
     
     /*quote under image*/
         
@@ -49,26 +49,13 @@
     }
 
     /*text block section */
+
+    &__side-by-side{
+        display: flex;
+    }
     
-     &__side-blocks{
-         
-         &--title{
-
-            @include tablet{
-                font-weight: 600;
-            }
-        }
-
-            @include tablet{
-                .musicians-article__side-by-side{
-                    display: flex;
-                }
-            }
-
-        p{
-        
-        margin-right: 1rem;
-        width: 80%;
-        }
+    p{     
+    margin-right: 1rem;
+    width: 80%;
     } 
 }

@@ -14,47 +14,43 @@
     @include tablet{
         flex-direction: row;
         @include tablet-padding-sides;
-
-        @include desktop{
-            @include desktop-padding-sides;
-        }
     }
-
+    @include desktop{
+        @include desktop-padding-sides;
+    }
 
     &__headline{
         color: $white;
-        @include mobile-headline-padding;
+        padding: 1rem 1rem 1rem 0rem;
 
         @include tablet{
             width: 33%;
-            }
         }
+    }
 
     //social logos
 
     &__social-links{
-        
-        display: flex;
         padding-bottom: 1rem;
 
         @include tablet{
             padding: 0;
-            width: 32%;
+            display: flex;
         }
         
-        &-images{
-
-            padding-right: 2rem;
+    &-images{
+        padding-right: 2rem;
+        
+        @include tablet{
+            align-items: center;
             display: flex;
+        }
 
-            @include tablet{
-                align-items: center;
-            }
-            img{
-                height: 2rem;
-                }
+        img{
+            height: 2rem;
             }
         }
+    }
 
     &__logo-text-one{
         display: none;
@@ -65,7 +61,7 @@
         align-items: center;
         justify-content: flex-end;
         }
-}
+    }
     
     //address and contact info 
 
@@ -74,15 +70,12 @@
         &__information{
         display: flex;
         width: 100%;
-
-        .footer-stylings{
-            margin-right: 1rem;
-            width: 30%;
+        }
+        &-stylings{
+            padding-right: 1rem;
             flex-grow: 2;
-            }
         }
     }
-
 
     &__name-and-company{
         h4{
@@ -94,12 +87,10 @@
 
         @include tablet{
             @include tablet-footer-padding-between-text;
-        }
-        
+        }   
     }
 
     &__address{
-
         @include tablet{
 
             @include tablet-footer-padding-between-text;
@@ -107,7 +98,6 @@
     }
 
     &__email{
-
         @include tablet{
             margin-top: 0;
         }
@@ -121,9 +111,11 @@
 
     // copyright section
 
-     &__copyright{
+    &__copyright{
+        padding-top: 3rem;
+        padding-bottom: 2rem;
 
-         &--text{
+        &--text{
             margin-top: 0;
 
             @include tablet{
@@ -131,11 +123,9 @@
             }
         }
     } 
+
     &__logo-text-two{
-        align-self: center;
-        flex-grow: 2;
-        text-align: right;
-        padding-top: 3rem;
+        
         max-height: 1.25rem;
         max-width: 7.5rem;
 

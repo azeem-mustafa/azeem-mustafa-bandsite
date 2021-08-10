@@ -3,84 +3,102 @@
 @use '../mixins/mixins-paddings' as *;
 @use '../typography' as *;
 
-header{
+.header{
     background-color: $black;
-        
-    .header__wrapper{
+    padding-top: 2rem;
+    
+    @include tablet{
+        @include tablet-padding-sides;
+        padding-top: 2rem;
+        flex-grow: 5;
+    }
+
+    @include desktop{
+        @include desktop-padding-sides;
+        padding-top: 2rem;
+    }
+    
+    &__wrapper{
         flex-wrap: wrap;
         justify-content: center;
         display: flex;
-        
+
+        @include tablet{
+            align-items: baseline;
+            flex-wrap: nowrap;
+                     
         }
+    }
+      
+    &__logo{
+        padding-bottom: 1rem;
+
+        @include tablet{
+            display: flex;
+            align-items: center;
+        }
+
+    &-text{
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        }
+    }
+}
+
+.nav-bar{
+    width: 100%;
+   
+    @include tablet{
+        display: inline-flex;
+        
+        padding-left: 5rem;
+    }
+
+    @include desktop{
+        width: 80%;
+    }
+    &__list{
+        display: flex;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        padding-inline-start: 0px;
+        padding-left: 0;
+        height: 100%;
+        
         
         @include tablet{
-            width: 100%;
-            }
-
-        .header__logo{
-            @include mobile-headline-padding;
-            color: $white;
-
-            @include tablet{
-                width: 30%;
-                @include tablet-padding-nav;
-                }
-
-            @include desktop{
-                @include desktop-padding-headlines;
-                }
-
-            &-text{
-                align-items: center;
-                max-height: 1.25rem;
-                max-width: 7.5rem;
-                }
-            }
-
-        .nav-bar{
-            width: 100%;
-
-            @include tablet{
-                width: 70%;
-                }
-
-            &__list{
-                display: flex;
-                margin-block-start: 0em;
-                padding-left: 0;
-                height: 100%;
-
-                @include tablet{
-                    display: inline-flex;
-                    align-items: center;
-                    margin-block-end: 0em;
-                    }
-                }
-
-            &__item{
-                width: 50%;
-                display: flex;
-                align-items: center;
-
-                &--selected{
-                    border-bottom: $white 0.625rem solid;
-                }
-                
-                &:hover{
-                    border-bottom: $alabaster 0.625rem solid;
-                    color: $white;
-                    font-weight: 600;
-                }
-            }
-
-            &__link{
-                flex-grow: 2;  
-                color: $mercury;  
-                text-align: center;
-
-                @include tablet{
-                    @include tablet-padding-nav;
-                }
-            }     
+            display: inline-flex;
+            align-items: flex-start;
         }
+    }
+
+    &__item{
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        @include tablet{
+            width: unset;
+            margin: 0rem 2rem;
+            
+        }
+    }
+    
+    &__link{
+        flex-grow: 2;  
+        color: $mercury;  
+        text-align: center;
+        font-weight: 400;
+        padding-bottom: 1rem;
+
+        &--selected{
+            border-bottom: $white 0.625rem solid;  
+        }
+        
+        &:hover{
+            border-bottom: $alabaster 0.625rem solid;
+            color: $white;
+            font-weight: 600;
+        }
+    }     
 }

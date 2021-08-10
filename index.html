@@ -10,46 +10,45 @@
 </head>
 <body>
 
-  <!--Header Section-->
+<!--Header Section-->
   <header class="header">
 
-      <div class="header__wrapper">
+    <div class="header__wrapper">
 
-      <div class="header__logo">
-              
-        <a class="header__logo-text" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg"></a>
-
+      <div class="header__logo"> 
+        <a class="header__logo-text" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg" class="header__logo-text" alt="footer logo"></a>
       </div>
 
       <nav class="nav-bar">
-
         <ul class="nav-bar__list">
-          <li class="nav-bar__item nav-bar__item--selected">
-            <a class="nav-bar__link subheader" href="./index.html">Biography</a>
+
+          <li class="nav-bar__item">
+            <a class="nav-bar__link nav-bar__link--selected subheader" href="./index.html">Biography</a>
           </li>
+          
           <li class="nav-bar__item">
             <a class="nav-bar__link subheader" href="./pages/show.html">Shows</a>
           </li>
+          
         </ul>
-
       </nav>
+    </div>
 
-      </div>
-
-    </header>
+  </header>
 
   <main>
 
-    <!--Main Hero Banner-->
+     <!--Main Hero Banner-->
 
     <section class="hero-img">
+        
+      <div class="hero-img__text-container">
+        <h1 class="hero-img__page-title page-header">The Bees Knees</h1>
+      </div> 
 
-      <img class="hero-img__background" src="./assets/Images/hero-bio.jpg" alt="hero-img">
-      <div class="hero-img__overlay"></div>
+      <div class="hero-img__background"></div>
 
-      <h1 class="hero-img__page-title page-header">The Bees Knees</h1>
-
-    </section>  
+    </section>
 
 
     <!--Image and headline about Bees Knees-->
@@ -59,36 +58,36 @@
 
       <div class="musicians-article__content-box">
 
-      <img class="musicians-article__image" src="./assets/Images/band.jpg" alt="band image">
+        <img class="musicians-article__image" src="./assets/Images/band.jpg" alt="band image">
+        
+      <!--quote under photo musicians-->
 
-    <!--quote under photo musicians-->
+        <blockquote class="musicians-article__blockquote">
 
-      <blockquote class="musicians-article__blockquote">
+          <p class="musicians-article__quotation subheader">"We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board'"</p>
+          <p class="musicians-article__quotation--author subheader">- Bryan Teddy, lead vocalist of The Bees Knees</p>
 
-        <p class="musicians-article__quotation subheader">"We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board'"</p>
-        <p class="musicians-article__quotation--author subheader">- Bryan Teddy, lead vocalist of The Bees Knees</p>
+        </blockquote>
 
-      </blockquote>
+      <!--Written article about musicans-->  
 
-    <!--Written article about musicans-->  
+        <section class="musicians-article__written-block">
 
-      <article class="musicians-article__written-block">
+          <aside class="musicians-article__side-blocks">
 
-        <aside class="musicians-article__side-blocks">
-
-          <h3 class="musicians-article__side-blocks-title subheader">The Bees Knees</h3>
-              
-          <div class="musicians-article__side-by-side">
+            <h3 class="musicians-article__side-blocks-title subheader">The Bees Knees</h3>
                 
-            <p class="body-copy">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. </p>
-            <p class="body-copy"> From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
-              
-          </div>
+            <div class="musicians-article__side-by-side">
+                  
+              <p class="body-copy">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. </p>
+              <p class="body-copy"> From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
+                
+            </div>
 
-        </aside>
+            </aside>
 
-      </article>
-
+        </section>
+      </div>
     </section>
 
   <!--Photo Gallery-->
@@ -127,9 +126,9 @@
               </div>
 
               <div class="comments__comment-box">
-                <label class="comments__form-label body-copy" for="name">NAME</label>
+                <label class="comments__form-label body-copy">NAME</label>
                 <input class="comments__name" type="text" name="user_name" placeholder="Enter Your Name">
-                <label class="comments__form-label body-copy" for="comments">COMMENTS</label>
+                <label class="comments__form-label body-copy">COMMENTS</label>
                 <textarea class="comments__text-area body-copy" name="user_comment" placeholder="Add A New Comment"></textarea>
                 <button class="comments__button" type="submit">COMMENT</button>
               </div>
@@ -159,7 +158,7 @@
     </div>
 
     <div class="footer__logo-text-one">  
-      <a class="footer__logo-text-one-writing" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg"></a>
+      <a class="footer__logo-text-one-writing" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg" alt="logo text"></a>
     </div>
 
   <!--Cam Adams Section-->
@@ -236,7 +235,7 @@
 
       <div class="footer__logo">  
 
-        <a class="footer__logo-text-two" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg"></a>
+        <a class="footer__logo-text-two" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg" alt="logo text"></a>
           
       </div>
 
@@ -245,7 +244,7 @@
     </div>
 
   </footer>
-  
+
   <script src="./scripts/index-page.js"></script>
 </body>
 </html>

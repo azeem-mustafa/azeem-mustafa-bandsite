@@ -39,7 +39,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        border: yellow 3px solid;
         justify-content: space-between;
         }
     }
@@ -58,7 +57,6 @@
         display: inline-flex;
         font-weight: 600;
         margin-top: 0;
-        border: green 2px solid; 
     }
 
     &__data{
@@ -86,7 +84,7 @@
         }
     }
 
-@include tablet{
+    @include tablet{
     .shows__section:nth-child(n + 2) > .shows__block > .shows__location-block > .shows__header{
         display: none;
         }

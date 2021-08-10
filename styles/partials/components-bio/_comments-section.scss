@@ -2,25 +2,22 @@
 @use '../mixins/mixins-paddings' as *;
 @use '../mixins/mixin' as *;
 
-
+/*this is the whole section*/
 .comments{
     @include mobile-padding-sides;
-    display: flex;
-    flex-direction: column;
     background-color: $alabaster;
 
     @include tablet{
         @include tablet-padding-sides;
-
-        @include desktop{
-            @include desktop-padding-sides;
-        }
     }
 
+    @include desktop{
+        @include desktop-padding-sides;
+    }
+
+    /*this is the inner block*/
+
     &__block{
-        display: flex;
-        flex-direction: column;
-        
         @include tablet{
             @include tablet-padding-sides;
         }
@@ -33,21 +30,31 @@
     /*these are general stylings throughout section*/
     &__button{
         @include button;
+        margin: 1rem 0rem;
 
         @include tablet{
-            min-width: 9.375rem;
-            max-width: 9.375rem;
-            padding: 0rem 1.938rem;
-            margin-left: auto
-            
+            margin-left: auto;
         }
-     }
+    }
+
+    &__form-avatar{
+        border-radius: 50%;
+        max-height: 2.25rem;
+        width: 2.25rem;
+
+        @include tablet{
+            max-height: 3rem;
+            width: 3rem;
+        }
+    }
 
     &__divider{
         @include divider;
     }
 
+
     /*this first section is for the user inputting comments*/
+
     /*flex box for user input comments*/
     &__form-flex{
         display: flex;
@@ -59,18 +66,8 @@
         padding-top: 2.25rem;
     }
 
-    &__form-avatar{
-    border-radius: 50%;
-    max-height: 2.25rem;
-    width: 2.25rem;
 
-    @include tablet{
-        max-height: 3rem;
-        width: 3rem;
-    }
-    }
-
-    /*comment section*/
+    /*user comment input section*/
     &__comment-box{
         display: flex;
         flex-direction: column;
@@ -78,10 +75,8 @@
         @include mobile-padding-sides;
     }
     &__form-label{
-        padding-bottom: 0.25rem;
-        font-weight: 600;
         color: $mercury;
-        padding-top: 1rem;
+        @include mobile-padding-top-and-bottom;
     }
 
     &__name{
@@ -97,13 +92,11 @@
         border: 0.063rem #d22d2d solid;
     }
 
+    
+
     /*this second section is form the comments that are listed after inputting*/
     &__listed-block{
         padding-bottom: 2rem;
-
-        &__listed-comments-section{
-            width: 100%
-        }
     }
 
     &__listed-comments-flexbox{
@@ -117,13 +110,10 @@
     }
 
     &__listed-date{
-        display: inline-flex;
-        height: 1rem;
         position: absolute;
         right: 1rem;
         top: 0;
-        color: $mercury;
-        font-weight: 500;
+        color: $mercury;   
     }
 
     &__avatar-placeholder{
@@ -132,16 +122,11 @@
         width: 2.25rem;
         background-color: $mercury;
     }
-
-    &__listed-subheader{
-        display: inline-flex;
-        height: 1rem;
-        font-weight: 600;
-    }
+   
     &__listed-text-area{
         margin: 0;
-        font-weight: 400;
     }
+
     &__listed-comments-section{
         display: flex;
     }
