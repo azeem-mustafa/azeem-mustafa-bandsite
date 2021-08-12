@@ -1,23 +1,74 @@
-const comments = [
-    {
-        img: '#',
-        name: 'Connor Walton',
-        date: '02/17/2021',
-        comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
-    },
-    {
-        img: '#',
-        name: 'Emilie Beach',
-        date: '01/09/2021',
-        comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
-    },
-    {
-        img: '#',
-        name: 'Miles Acosta',
-        date: '12/20/2020',
-        comment: `I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.`
-    },
-]
+const API_URL = 'https://project-1-api.herokuapp.com';
+const API_KEY = '5bd52bff-97fc-44b8-8902-8ae513fa3f50';
+
+
+/*get new API KEY BEFORE SUBBMITTING*/
+
+/*format date*/
+function dateDisplay(timeAndDay){
+    const currentDate = new Date(timeAndDay);
+    let month = currentDate.getMonth() + 1;
+    let date = currentDate.getDate();
+    let year = currentDate.getFullYear();
+
+    return + month + "/" + date + "/" + year;
+    }
+
+
+
+function displayNewComments(){
+    axios   
+    .get( `${API_URL}/comments?api_key=${API_KEY}`)
+    .then(newComments => {
+    console.log(newComments);
+        /*to unshift the comments*/
+        const newAPIComments = newComments.data.reverse();
+
+    // newComments.data.forEach(commentAddition => {
+        
+    // })
+    displayComments(newComments.data)
+    });
+};
+
+
+displayNewComments();
+
+
+
+const newCommentBlock = (commentsInformation) =>{
+    axios
+    .post( `${API_URL}/comments?api_key=${API_KEY}`, {
+        name: commentsInformation.name,
+        comment: commentsInformation.comment  
+    })
+    .then(renderNewCommentBlock => {
+    displayNewComments(renderNewCommentBlock.data)
+});
+}
+
+
+
+// const comments = [
+//     {
+//         img: '#',
+//         name: 'Connor Walton',
+//         date: '02/17/2021',
+//         comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
+//     },
+//     {
+//         img: '#',
+//         name: 'Emilie Beach',
+//         date: '01/09/2021',
+//         comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
+//     },
+//     {
+//         img: '#',
+//         name: 'Miles Acosta',
+//         date: '12/20/2020',
+//         comment: `I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.`
+//     },
+// ]
 
 
 /*created a few extra items here*/
@@ -70,11 +121,7 @@ form.addEventListener('submit', function(event){
     };
 
 
-    /*format date*/
-
-    const currentDate = new Date(Date.now());
-    const formattedDate =currentDate.getMonth() + "/" + currentDate.getDate() + "/" + currentDate.getFullYear();
-
+    
     /*new comment submition*/
 
     const newComment = {
@@ -84,13 +131,15 @@ form.addEventListener('submit', function(event){
         comment: userComment
     };
 
-    comments.unshift(newComment);
+    // push(event);
+
+    // comments.unshift(newComment);
 
     const emptyCommentsBlock = document.querySelector('.comments__listed-block');
     emptyCommentsBlock.innerHTML = "";
     event.target.reset();
     
-    displaycomments(comments);
+    newCommentBlock(newComment);
    
 });
 
@@ -139,7 +188,7 @@ listedCommentsFlexBox.appendChild(listedCommentsNameHeader);
 const listedCommentsDate = document.createElement('p');
 listedCommentsDate.classList.add('comments__listed-date');
 listedCommentsDate.classList.add('body-copy');
-listedCommentsDate.innerText = commentsData.date;
+listedCommentsDate.innerText = dateDisplay(commentsData.timestamp);
 
 listedCommentsFlexBox.appendChild(listedCommentsDate);
 
@@ -157,7 +206,7 @@ return listedCommentsSection
 }
 
 
-const displaycomments = (comments) => {
+let displayComments = (comments) => {
     comments.forEach(comment => { 
         const commentsData = comment;
         console.log('Comments Data: ', commentsData);
@@ -177,26 +226,6 @@ const displaycomments = (comments) => {
 }
 
 
-displaycomments(comments);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// displaycomments(comments);
 
 
