@@ -6,7 +6,7 @@ function displayNewShowList() {
     axios.get(`${API_URL}/showdates?api_key=${API_KEY}`)
         .then(newShows => {
             console.log(newShows);
-            // console.log(newShows.data[1].date);
+        
             const newAPIShows = newShows.data.reverse();
 
             generateShowsList(newShows.data)
@@ -16,8 +16,6 @@ function displayNewShowList() {
 displayNewShowList();
 
 /*format date*/
-
-
 function dateDisplay(timeAndDay){
 
     const currentDate = new Date(timeAndDay * 1);
@@ -32,13 +30,9 @@ function dateDisplay(timeAndDay){
     let day = dayNames[currentDate.getDay()];
 
     return day + " " + month + " " + date + " " + year
-    }
-
-
+}
 
 const showsList = document.querySelector('.shows__list');
-
-
 
 const generateShowsContent = (showData) => {
     /*created section for shows*/
@@ -72,8 +66,6 @@ const generateShowsContent = (showData) => {
     datesData.classList.add('shows__date');
     datesData.classList.add('body-copy')
     datesData.innerText = dateDisplay(showData.date);
-
-
 
     datesBlock.appendChild(datesData);
 
@@ -145,7 +137,6 @@ const generateShowsContent = (showData) => {
     divider.classList.add('shows__divider');
 
     showListSection.appendChild(divider);
-
 
     return showListSection
 }

@@ -20,7 +20,6 @@ const newCommentBlock = (commentsInformation) => {
         .post(`${API_URL}/comments?api_key=${API_KEY}`, {
             name: commentsInformation.name,
             comment: commentsInformation.comment
-            // img: commentsInformation.img
         })
         .then(renderNewCommentBlock => {
             displayNewComments(renderNewCommentBlock.data)
@@ -36,7 +35,6 @@ function dateDisplay(timeAndDay) {
 
     return + month + "/" + date + "/" + year;
 }
-
 
 /*created a few extra items here*/
 
@@ -73,17 +71,19 @@ form.addEventListener('submit', function (event) {
         const nameValidation = document.querySelector('.comments__name');
         nameValidation.classList.add('comments__validation');
 
-        return false
+        return false;
     }
 
     if (userComment === '') {
         const commentsValidation = document.querySelector('.comments__text-area');
         commentsValidation.classList.add('comments__validation');
 
-        return false
+        return false;
     };
 
     /*new comment submition*/
+
+    const img = document.querySelector('.comments__form-avatar');
 
     const newComment = {
         img: '../assets/Images/Mohan-muruge.jpg',
@@ -120,6 +120,7 @@ const generateListedComments = (commentsData) => {
 
     const listedCommentsAvatar = document.createElement('img');
     listedCommentsAvatar.classList.add('comments__avatar-placeholder');
+    
 
     listedImgFlexBox.appendChild(listedCommentsAvatar);
 
