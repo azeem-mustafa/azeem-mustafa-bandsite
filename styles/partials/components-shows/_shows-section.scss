@@ -46,6 +46,14 @@
     &__dates-block{
         display: flex;
         flex-direction: column;
+        width: 25%;
+    }
+
+    &__location-block{
+        width: 25%;
+    }
+    &__venue-block{
+        width: 25%;
     }
 
     &__header{

@@ -1,6 +1,7 @@
 @use '../variable' as *;
 @use '../mixins/mixins-paddings' as *;
 @use '../mixins/mixin' as *;
+@use '../typography' as *;
 
 /*this is the whole section*/
 .comments{
@@ -92,8 +93,6 @@
         border: 0.063rem #d22d2d solid;
     }
 
-    
-
     /*this second section is form the comments that are listed after inputting*/
     &__listed-block{
         padding-bottom: 2rem;
@@ -130,5 +129,8 @@
     &__listed-comments-section{
         display: flex;
     }
-
+    
+    &__listed-subheader{
+        font-weight: 600;
+    }
 }

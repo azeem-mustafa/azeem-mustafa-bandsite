@@ -236,6 +236,13 @@
 .shows__dates-block {
   display: flex;
   flex-direction: column;
+  width: 25%;
+}
+.shows__location-block {
+  width: 25%;
+}
+.shows__venue-block {
+  width: 25%;
 }
 .shows__header {
   color: #E1E1E1;
@@ -508,6 +515,11 @@
 /*setting all content to fit inside respective boxes*/
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*changing default list items to neutral settings*/

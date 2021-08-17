@@ -1,165 +1,154 @@
-
-const shows = [
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Tue Sept 21 2021',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Oct 15 2021',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Nov 06 2021',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Nov 26 2021',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Wed Dec 15 2021',
-        venue: 'Press Club',
-        location: 'San Fancisco, CA'
-    }
-
-];
+const API_URL = 'https://project-1-api.herokuapp.com';
+const API_KEY = '5bd52bff-97fc-44b8-8902-8ae513fa3f50';
 
 
+function displayNewShowList() {
+    axios.get(`${API_URL}/showdates?api_key=${API_KEY}`)
+        .then(newShows => {
+            console.log(newShows);
+        
+            const newAPIShows = newShows.data.reverse();
 
+            generateShowsList(newShows.data)
+        });
+};
 
+displayNewShowList();
+
+/*format date*/
+function dateDisplay(timeAndDay){
+
+    const currentDate = new Date(timeAndDay * 1);
+
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    const dayNames = ["Sun", "Mon", "Tues", "Wed", "Thus", "Fri", "Sat"];
+
+    let month = monthNames[currentDate.getMonth()];
+    let date = currentDate.getDate();
+    let year = currentDate.getFullYear();
+    let day = dayNames[currentDate.getDay()];
+
+    return day + " " + month + " " + date + " " + year
+}
 
 const showsList = document.querySelector('.shows__list');
 
-
-
 const generateShowsContent = (showData) => {
-/*created section for shows*/
-const showListSection = document.createElement('section');
-showListSection.classList.add('shows__section');
+    /*created section for shows*/
+    const showListSection = document.createElement('section');
+    showListSection.classList.add('shows__section');
 
-showsList.appendChild(showListSection);
+    showsList.appendChild(showListSection);
 
-/*create a div for each show's information*/
+    /*create a div for each show's information*/
 
-const showListBlock = document.createElement('div');
-showListBlock.classList.add('shows__block');
+    const showListBlock = document.createElement('div');
+    showListBlock.classList.add('shows__block');
 
-showListSection.appendChild(showListBlock);
+    showListSection.appendChild(showListBlock);
 
-/*create dates section*/
+    /*create dates section*/
 
-const datesBlock = document.createElement('div');
-datesBlock.classList.add('shows__dates-block');
+    const datesBlock = document.createElement('div');
+    datesBlock.classList.add('shows__dates-block');
 
-showListBlock.appendChild(datesBlock);
+    showListBlock.appendChild(datesBlock);
 
-const datesHeader = document.createElement('span');
-datesHeader.classList.add('shows__header');
-datesHeader.classList.add('labels-and-buttons');
-datesHeader.innerText = 'DATES';
+    const datesHeader = document.createElement('span');
+    datesHeader.classList.add('shows__header');
+    datesHeader.classList.add('labels-and-buttons');
+    datesHeader.innerText = 'DATES';
 
-datesBlock.appendChild(datesHeader);
+    datesBlock.appendChild(datesHeader);
 
-const datesData = document.createElement('p');
-datesData.classList.add('shows__date');
-datesData.classList.add('body-copy')
-datesData.innerText = showData.date;
+    const datesData = document.createElement('p');
+    datesData.classList.add('shows__date');
+    datesData.classList.add('body-copy')
+    datesData.innerText = dateDisplay(showData.date);
 
-datesBlock.appendChild(datesData);
+    datesBlock.appendChild(datesData);
 
-/*creates venue section*/
+    /*creates venue section*/
 
-const venueBlock = document.createElement('div');
-venueBlock.classList.add('shows__venue-block');
+    const venueBlock = document.createElement('div');
+    venueBlock.classList.add('shows__venue-block');
 
-showListBlock.appendChild(venueBlock);
+    showListBlock.appendChild(venueBlock);
 
-const venueHeader = document.createElement('span');
-venueHeader.classList.add('shows__header');
-venueHeader.classList.add('labels-and-buttons');
-venueHeader.innerText = 'VENUE';
+    const venueHeader = document.createElement('span');
+    venueHeader.classList.add('shows__header');
+    venueHeader.classList.add('labels-and-buttons');
+    venueHeader.innerText = 'VENUE';
 
-venueBlock.appendChild(venueHeader);
+    venueBlock.appendChild(venueHeader);
 
-const venueData = document.createElement('p');
-venueData.classList.add('shows__data');
-venueData.classList.add('body-copy');
-venueData.innerText = showData.venue;
+    const venueData = document.createElement('p');
+    venueData.classList.add('shows__data');
+    venueData.classList.add('body-copy');
+    venueData.innerText = showData.place;
 
-venueBlock.appendChild(venueData);
+    venueBlock.appendChild(venueData);
 
-/*create location section*/
+    /*create location section*/
 
-const locationBlock = document.createElement('div');
-locationBlock.classList.add('shows__location-block');
+    const locationBlock = document.createElement('div');
+    locationBlock.classList.add('shows__location-block');
 
-showListBlock.appendChild(locationBlock);
+    showListBlock.appendChild(locationBlock);
 
-const locationHeader = document.createElement('span');
-locationHeader.classList.add('shows__header');
-locationHeader.classList.add('labels-and-buttons');
-locationHeader.innerText = 'LOCATION';
+    const locationHeader = document.createElement('span');
+    locationHeader.classList.add('shows__header');
+    locationHeader.classList.add('labels-and-buttons');
+    locationHeader.innerText = 'LOCATION';
 
-locationBlock.appendChild(locationHeader);
+    locationBlock.appendChild(locationHeader);
 
-const locationData = document.createElement('p');
-locationData.classList.add('shows__data');
-locationData.classList.add('body-copy');
-locationData.innerText = showData.location;
+    const locationData = document.createElement('p');
+    locationData.classList.add('shows__data');
+    locationData.classList.add('body-copy');
+    locationData.innerText = showData.location;
 
-locationBlock.appendChild(locationData);
+    locationBlock.appendChild(locationData);
 
-/*button section*/
+    /*button section*/
 
-const buttonBlock = document.createElement('div');
-buttonBlock.classList.add('shows__button-block');
+    const buttonBlock = document.createElement('div');
+    buttonBlock.classList.add('shows__button-block');
 
-showListBlock.appendChild(buttonBlock);
+    showListBlock.appendChild(buttonBlock);
 
-const buyBtn = document.createElement('button');
-buyBtn.classList.add('shows__button');
-buyBtn.classList.add('labels-and-buttons');
-buyBtn.innerText = 'BUY TICKETS';
+    const buyBtn = document.createElement('button');
+    buyBtn.classList.add('shows__button');
+    buyBtn.classList.add('labels-and-buttons');
+    buyBtn.innerText = 'BUY TICKETS';
 
-buttonBlock.appendChild(buyBtn);
+    buttonBlock.appendChild(buyBtn);
 
-/*button event listener*/
+    /*button event listener*/
 
-buyBtn.addEventListener('click', () =>{
-    console.log(showData.venue)
-});
+    buyBtn.addEventListener('click', () => {
+        console.log(showData.venue)
+    });
 
-/*line divider*/
+    /*line divider*/
 
-const divider = document.createElement('hr');
-divider.classList.add('shows__divider');
+    const divider = document.createElement('hr');
+    divider.classList.add('shows__divider');
 
-showListSection.appendChild(divider);
+    showListSection.appendChild(divider);
 
-
-return showListSection
+    return showListSection
 }
 
-
-const generateShowsList = (shows) => {
-    for (let i = 0; i < shows.length; i++){
-        const showData = shows[i];
+let generateShowsList = (shows) => {
+    shows.forEach(show => {
+        const showData = show;
         console.log('Shows Data: ', showData);
 
         const showSections = generateShowsContent(showData);
         console.log('Shows Sections: ', showSections);
 
         showsList.appendChild(showSections);
-    }
+    })
 };
-
-generateShowsList(shows);

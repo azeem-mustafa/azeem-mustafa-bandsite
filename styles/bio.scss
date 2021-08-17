@@ -8,7 +8,12 @@
 /*setting all content to fit inside respective boxes*/
 
 *, *::before, *::after{
-    box-sizing: border-box;
+    box-sizing: border-box;  
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 
 /*changing default list items to neutral settings*/

@@ -138,6 +138,119 @@
   }
 }
 
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*mobile text formatting*/
+/*typography styles*/
+.page-header {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (min-width: 48rem) {
+  .page-header {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+
+.section-header {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (min-width: 48rem) {
+  .section-header {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+.subheader {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media (min-width: 48rem) {
+  .subheader {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.body-copy {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 48rem) {
+  .body-copy {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.footer-text {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 48rem) {
+  .footer-text {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.labels-and-buttons {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 48rem) {
+  .labels-and-buttons {
+    font-family: "AvenirNext LT Pro";
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
 /*this is the whole section*/
 .comments {
   padding: 0rem 1rem;
@@ -305,118 +418,8 @@
 .comments__listed-comments-section {
   display: flex;
 }
-
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-/*mobile text formatting*/
-/*typography styles*/
-.page-header {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-@media (min-width: 48rem) {
-  .page-header {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-  }
-}
-
-.section-header {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-@media (min-width: 48rem) {
-  .section-header {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-  }
-}
-
-.subheader {
-  font-family: "AvenirNext LT Pro";
+.comments__listed-subheader {
   font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-@media (min-width: 48rem) {
-  .subheader {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-.body-copy {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 400;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-}
-@media (min-width: 48rem) {
-  .body-copy {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-
-.footer-text {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 400;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-}
-@media (min-width: 48rem) {
-  .footer-text {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-.labels-and-buttons {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 700;
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-}
-@media (min-width: 48rem) {
-  .labels-and-buttons {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-  }
 }
 
 .header {
@@ -640,6 +643,11 @@
 /*setting all content to fit inside respective boxes*/
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*changing default list items to neutral settings*/
